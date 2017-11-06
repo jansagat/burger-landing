@@ -17,11 +17,6 @@
 }
 
 /* line 17, ../scss/section/burger.scss */
-.burger__container {
-  width: 940px;
-}
-
-/* line 21, ../scss/section/burger.scss */
 .burger__nav {
   text-transform: uppercase;
   list-style: none;
@@ -31,7 +26,7 @@
   width: 520px;
 }
 
-/* line 30, ../scss/section/burger.scss */
+/* line 26, ../scss/section/burger.scss */
 .burger__link {
   font-size: 13px;
   font-family: ubuntumedium;
@@ -40,12 +35,12 @@
   text-decoration: none;
 }
 
-/* line 38, ../scss/section/burger.scss */
+/* line 34, ../scss/section/burger.scss */
 .burger__list {
   display: inline-block;
   position: relative;
 }
-/* line 42, ../scss/section/burger.scss */
+/* line 38, ../scss/section/burger.scss */
 .burger__list:after {
   content: '';
   width: 4px;
@@ -56,14 +51,14 @@
   top: 40%;
   margin-left: 15px;
 }
-/* line 53, ../scss/section/burger.scss */
+/* line 49, ../scss/section/burger.scss */
 .burger__list:last-child:after {
   content: '';
   width: 0;
   height: 0;
 }
 
-/* line 60, ../scss/section/burger.scss */
+/* line 56, ../scss/section/burger.scss */
 .burger__order {
   font-size: 13px;
   font-family: ubuntumedium;
@@ -77,20 +72,20 @@
   margin-left: 15px;
 }
 
-/* line 73, ../scss/section/burger.scss */
+/* line 69, ../scss/section/burger.scss */
 .burger__content {
   display: flex;
   justify-content: space-around;
 }
 
-/* line 78, ../scss/section/burger.scss */
+/* line 74, ../scss/section/burger.scss */
 .burger__image {
   background: url(../img/pic/burger-picture.png) no-repeat;
   width: 451px;
   height: 420px;
 }
 
-/* line 84, ../scss/section/burger.scss */
+/* line 80, ../scss/section/burger.scss */
 .burger__text {
   max-width: 420px;
   display: flex;
@@ -98,16 +93,13 @@
   align-content: center;
 }
 
-/* line 91, ../scss/section/burger.scss */
+/* line 87, ../scss/section/burger.scss */
 .burger__title {
-  font-size: 72px;
-  font-family: gagalinregular;
   color: #f9b43b;
-  font-weight: 100;
   margin-bottom: 35px;
 }
 
-/* line 99, ../scss/section/burger.scss */
+/* line 92, ../scss/section/burger.scss */
 .burger__description {
   font-size: 65px;
   font-family: lifehackmedium;
@@ -116,14 +108,14 @@
   line-height: 60px;
 }
 
-/* line 107, ../scss/section/burger.scss */
+/* line 100, ../scss/section/burger.scss */
 .burger__arrow {
   display: flex;
   justify-content: center;
   margin-top: 90px;
 }
 
-/* line 113, ../scss/section/burger.scss */
+/* line 106, ../scss/section/burger.scss */
 .burger__arrow-link {
   background: url(../img/pic/arrow-scroll.png);
   width: 29px;
@@ -141,6 +133,61 @@
 .nav {
   display: flex;
   align-items: center;
+}
+
+/* line 1, ../scss/section/best.scss */
+.best {
+  background: url(../img/bg/best-bg.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  min-height: 650px;
+  min-width: 940px;
+}
+
+/* line 11, ../scss/section/best.scss */
+.best__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+}
+
+/* line 18, ../scss/section/best.scss */
+.best__content {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+}
+
+/* line 24, ../scss/section/best.scss */
+.best__content-list {
+  min-width: 300px;
+  text-align: center;
+}
+
+/* line 29, ../scss/section/best.scss */
+.best__title {
+  color: #2f3234;
+}
+
+/* line 33, ../scss/section/best.scss */
+.best__small-title {
+  font-family: lifehackmedium;
+  font-size: 24.1px;
+  color: #2f3234;
+  margin-top: 20px;
+  margin-bottom: 29px;
+}
+
+/* line 41, ../scss/section/best.scss */
+.best__description {
+  font-family: ubuntulight;
+  font-size: 14px;
+  line-height: 1.7em;
+  color: #2f3234;
+  text-align: center;
 }
 
 @font-face {
@@ -179,7 +226,19 @@
   font-weight: normal;
   font-style: normal;
 }
-/* line 6, ../scss/main.scss */
-h2, h3 {
+/* line 7, ../scss/main.scss */
+h2, h3, h4, h5, h6 {
   margin: 0;
+}
+
+/* line 11, ../scss/main.scss */
+.title {
+  font-size: 72px;
+  font-family: gagalinregular;
+  font-weight: 100;
+}
+
+/* line 17, ../scss/main.scss */
+.container {
+  width: 940px;
 }

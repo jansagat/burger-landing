@@ -1,8 +1,19 @@
 @import "section/burger";
 @import "section/logo";
 @import "section/nav";
+@import "section/best";
 @import "layout/fonts";
 
-h2, h3 {
+h2, h3, h4, h5, h6 {
   margin: 0;
+}
+
+.title {
+  font-size: 72px;
+  font-family: gagalinregular;
+  font-weight: 100;
+}
+
+.container {
+  width: 940px;
 }
