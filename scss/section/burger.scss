@@ -1,0 +1,116 @@
+.burger {
+  background: url(../img/bg/burger-bg.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.burger__header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.burger__container {
+  width: 940px;
+}
+
+.burger__nav {
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 520px;
+}
+
+.burger__link {
+  font-size: 13px;
+  font-family: ubuntumedium;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.burger__list {
+  display: inline-block;
+  position:relative;
+
+  &:after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: absolute;
+    top: 40%;
+    margin-left: 15px;
+  }
+
+  &:last-child:after {
+    content: '';
+    width: 0;
+    height: 0;
+  }
+}
+
+.burger__order {
+  font-size: 13px;
+  font-family: ubuntumedium;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #e45028;
+  padding: 12px 16px;
+  border-radius: 4px;
+  max-height: 24%;
+  margin-left: 15px;
+}
+
+.burger__content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.burger__image {
+  background: url(../../img/pic/burger-picture.png) no-repeat;
+  width: 451px;
+  height: 420px;
+}
+
+.burger__text {
+  max-width: 420px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.burger__title {
+  font-size: 72px;
+  font-family: gagalinregular;
+  color: #f9b43b;
+  font-weight: 100;
+  margin-bottom: 35px;
+}
+
+.burger__description {
+  font-size: 65px;
+  font-family: lifehackmedium;
+  color: #ffffff;
+  font-weight: 100;
+  line-height: 60px;
+}
+
+.burger__arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+
+.burger__arrow-link {
+  background: url(../img/pic/arrow-scroll.png);
+  width: 29px;
+  height: 14px;
+}
+
