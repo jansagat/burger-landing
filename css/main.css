@@ -5,21 +5,23 @@
   display: flex;
   justify-content: center;
   height: 100vh;
+  min-height: 650px;
+  min-width: 940px;
 }
 
-/* line 9, ../scss/section/burger.scss */
+/* line 11, ../scss/section/burger.scss */
 .burger__header {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
 
-/* line 15, ../scss/section/burger.scss */
+/* line 17, ../scss/section/burger.scss */
 .burger__container {
   width: 940px;
 }
 
-/* line 19, ../scss/section/burger.scss */
+/* line 21, ../scss/section/burger.scss */
 .burger__nav {
   text-transform: uppercase;
   list-style: none;
@@ -29,7 +31,7 @@
   width: 520px;
 }
 
-/* line 28, ../scss/section/burger.scss */
+/* line 30, ../scss/section/burger.scss */
 .burger__link {
   font-size: 13px;
   font-family: ubuntumedium;
@@ -38,12 +40,12 @@
   text-decoration: none;
 }
 
-/* line 36, ../scss/section/burger.scss */
+/* line 38, ../scss/section/burger.scss */
 .burger__list {
   display: inline-block;
   position: relative;
 }
-/* line 40, ../scss/section/burger.scss */
+/* line 42, ../scss/section/burger.scss */
 .burger__list:after {
   content: '';
   width: 4px;
@@ -54,14 +56,14 @@
   top: 40%;
   margin-left: 15px;
 }
-/* line 51, ../scss/section/burger.scss */
+/* line 53, ../scss/section/burger.scss */
 .burger__list:last-child:after {
   content: '';
   width: 0;
   height: 0;
 }
 
-/* line 58, ../scss/section/burger.scss */
+/* line 60, ../scss/section/burger.scss */
 .burger__order {
   font-size: 13px;
   font-family: ubuntumedium;
@@ -75,20 +77,20 @@
   margin-left: 15px;
 }
 
-/* line 71, ../scss/section/burger.scss */
+/* line 73, ../scss/section/burger.scss */
 .burger__content {
   display: flex;
   justify-content: space-around;
 }
 
-/* line 76, ../scss/section/burger.scss */
+/* line 78, ../scss/section/burger.scss */
 .burger__image {
   background: url(../../img/pic/burger-picture.png) no-repeat;
   width: 451px;
   height: 420px;
 }
 
-/* line 82, ../scss/section/burger.scss */
+/* line 84, ../scss/section/burger.scss */
 .burger__text {
   max-width: 420px;
   display: flex;
@@ -96,7 +98,7 @@
   align-content: center;
 }
 
-/* line 89, ../scss/section/burger.scss */
+/* line 91, ../scss/section/burger.scss */
 .burger__title {
   font-size: 72px;
   font-family: gagalinregular;
@@ -105,7 +107,7 @@
   margin-bottom: 35px;
 }
 
-/* line 97, ../scss/section/burger.scss */
+/* line 99, ../scss/section/burger.scss */
 .burger__description {
   font-size: 65px;
   font-family: lifehackmedium;
@@ -114,14 +116,14 @@
   line-height: 60px;
 }
 
-/* line 105, ../scss/section/burger.scss */
+/* line 107, ../scss/section/burger.scss */
 .burger__arrow {
   display: flex;
   justify-content: center;
   margin-top: 90px;
 }
 
-/* line 111, ../scss/section/burger.scss */
+/* line 113, ../scss/section/burger.scss */
 .burger__arrow-link {
   background: url(../img/pic/arrow-scroll.png);
   width: 29px;
