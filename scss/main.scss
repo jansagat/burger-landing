@@ -1,6 +1,8 @@
 @import "section/burger";
 @import "section/logo";
 @import "section/nav";
+@import "section/review";
+@import "section/pagination";
 @import "section/best";
 @import "layout/fonts";
 
@@ -17,3 +19,4 @@ h2, h3, h4, h5, h6 {
 .container {
   width: 940px;
 }
+

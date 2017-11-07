@@ -1,0 +1,33 @@
+.pagination {
+  list-style: none;
+  position: fixed;
+  top: 89px;
+  right: 85px;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination__link:before{
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5.3px;
+  left: -5.5px;
+  border: 1px solid transparent;
+}
+
+.pagination__link:hover:before, .pagination__link_active:before{
+  border-color: #fff;
+}
+
+.pagination__link {
+  position: relative;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+}
