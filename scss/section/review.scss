@@ -3,7 +3,7 @@
   min-height: 650px;
 }
 
-.reviews__list {
+.reviews-list {
   list-style: none;
   height: 100%;
   display: -webkit-flex;
@@ -21,22 +21,21 @@
   position: relative;
 }
 
-.reviews__item:hover .reviews__description {
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0; }
-
 .reviews__description {
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 7.2%;
-  height: 0;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
   overflow: hidden;
   background-color: rgba(20, 20, 20, 0.7);
   box-sizing: border-box;
-  transition: height .3s ease-in;
+  transition: all;
+  padding: 10px;
+}
+
+.reviews__item:hover .reviews__description {
+  opacity: 1;
+  visibility: visible;
 }
 
 .reviews__name {

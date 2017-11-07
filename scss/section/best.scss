@@ -15,14 +15,14 @@
   align-content: space-evenly;
 }
 
-.best__content {
+.best-list {
   list-style: none;
   display: flex;
   align-items: baseline;
 }
 
-.best__content-list{
-  min-width: 300px;
+.best__item{
+  flex: 1 0 300px;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
   color: #2f3234;
 }
 
-.best__small-title {
+.best__subtitle {
   font-family: lifehackmedium;
   font-size: 24.1px;
   color: #2f3234;

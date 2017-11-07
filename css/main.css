@@ -17,49 +17,68 @@
 }
 
 /* line 17, ../scss/section/burger.scss */
-.burger__nav {
-  text-transform: uppercase;
-  list-style: none;
+.burger__content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 520px;
+  justify-content: space-around;
 }
 
-/* line 26, ../scss/section/burger.scss */
-.burger__link {
-  font-size: 13px;
-  font-family: ubuntumedium;
-  color: #ffffff;
-  display: inline-block;
-  text-decoration: none;
+/* line 22, ../scss/section/burger.scss */
+.burger__image {
+  flex: 1;
+  padding-right: 20px;
+}
+
+/* line 27, ../scss/section/burger.scss */
+.burger__text {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 /* line 34, ../scss/section/burger.scss */
-.burger__list {
-  display: inline-block;
-  position: relative;
-}
-/* line 38, ../scss/section/burger.scss */
-.burger__list:after {
-  content: '';
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #ffffff;
-  position: absolute;
-  top: 40%;
-  margin-left: 15px;
-}
-/* line 49, ../scss/section/burger.scss */
-.burger__list:last-child:after {
-  content: '';
-  width: 0;
-  height: 0;
+.burger__title {
+  color: #f9b43b;
+  margin-bottom: 35px;
 }
 
-/* line 56, ../scss/section/burger.scss */
-.burger__order {
+/* line 39, ../scss/section/burger.scss */
+.burger__description {
+  font-size: 65px;
+  font-family: lifehackmedium;
+  color: #ffffff;
+  font-weight: 100;
+  line-height: 60px;
+}
+
+/* line 47, ../scss/section/burger.scss */
+.burger__arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+/* line 53, ../scss/section/burger.scss */
+.burger__arrow-link {
+  background: url(../img/pic/arrow-scroll.png);
+  width: 29px;
+  height: 14px;
+}
+
+/* line 59, ../scss/section/burger.scss */
+.burger__logo {
+  width: 92px;
+  height: 69px;
+}
+
+/* line 1, ../scss/section/nav.scss */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+/* line 6, ../scss/section/nav.scss */
+.nav__order {
   font-size: 13px;
   font-family: ubuntumedium;
   color: #ffffff;
@@ -72,67 +91,46 @@
   margin-left: 15px;
 }
 
-/* line 69, ../scss/section/burger.scss */
-.burger__content {
-  display: flex;
-  justify-content: space-around;
+/* line 19, ../scss/section/nav.scss */
+.nav__item {
+  display: inline-block;
+  position: relative;
+}
+/* line 23, ../scss/section/nav.scss */
+.nav__item:after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  top: 40%;
+  margin-left: 15px;
+}
+/* line 34, ../scss/section/nav.scss */
+.nav__item:last-child:after {
+  content: '';
+  width: 0;
+  height: 0;
 }
 
-/* line 74, ../scss/section/burger.scss */
-.burger__image {
-  background: url(../img/pic/burger-picture.png) no-repeat;
-  width: 451px;
-  height: 420px;
-}
-
-/* line 80, ../scss/section/burger.scss */
-.burger__text {
-  max-width: 420px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-/* line 87, ../scss/section/burger.scss */
-.burger__title {
-  color: #f9b43b;
-  margin-bottom: 35px;
-}
-
-/* line 92, ../scss/section/burger.scss */
-.burger__description {
-  font-size: 65px;
-  font-family: lifehackmedium;
-  color: #ffffff;
-  font-weight: 100;
-  line-height: 60px;
-}
-
-/* line 100, ../scss/section/burger.scss */
-.burger__arrow {
-  display: flex;
-  justify-content: center;
-  margin-top: 90px;
-}
-
-/* line 106, ../scss/section/burger.scss */
-.burger__arrow-link {
-  background: url(../img/pic/arrow-scroll.png);
-  width: 29px;
-  height: 14px;
-}
-
-/* line 1, ../scss/section/logo.scss */
-.logo {
-  background: url(../img/logo/logo.png);
-  width: 92px;
-  height: 69px;
-}
-
-/* line 1, ../scss/section/nav.scss */
-.nav {
+/* line 41, ../scss/section/nav.scss */
+.nav-list {
+  text-transform: uppercase;
+  list-style: none;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 520px;
+}
+
+/* line 50, ../scss/section/nav.scss */
+.nav__link {
+  font-size: 13px;
+  font-family: ubuntumedium;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
 }
 
 /* line 1, ../scss/section/review.scss */
@@ -142,7 +140,7 @@
 }
 
 /* line 6, ../scss/section/review.scss */
-.reviews__list {
+.reviews-list {
   list-style: none;
   height: 100%;
   display: -webkit-flex;
@@ -162,27 +160,25 @@
 }
 
 /* line 24, ../scss/section/review.scss */
-.reviews__item:hover .reviews__description {
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
-/* line 30, ../scss/section/review.scss */
 .reviews__description {
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 7.2%;
-  height: 0;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
   overflow: hidden;
   background-color: rgba(20, 20, 20, 0.7);
   box-sizing: border-box;
-  transition: height .3s ease-in;
+  transition: all;
+  padding: 10px;
 }
 
-/* line 42, ../scss/section/review.scss */
+/* line 36, ../scss/section/review.scss */
+.reviews__item:hover .reviews__description {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 41, ../scss/section/review.scss */
 .reviews__name {
   font-family: gagalinregular;
   font-size: 14px;
@@ -192,7 +188,7 @@
   margin-bottom: 15px;
 }
 
-/* line 51, ../scss/section/review.scss */
+/* line 50, ../scss/section/review.scss */
 .reviews__text {
   font-family: ubuntulight;
   font-size: 14px;
@@ -202,7 +198,7 @@
   margin-bottom: 15px;
 }
 
-/* line 60, ../scss/section/review.scss */
+/* line 59, ../scss/section/review.scss */
 .reviews__link {
   display: inline-block;
   text-decoration: none;
@@ -215,7 +211,7 @@
   padding: 13px 28px;
 }
 
-/* line 72, ../scss/section/review.scss */
+/* line 71, ../scss/section/review.scss */
 .reviews__link:hover {
   background-color: #1f2122;
 }
@@ -278,15 +274,15 @@
 }
 
 /* line 18, ../scss/section/best.scss */
-.best__content {
+.best-list {
   list-style: none;
   display: flex;
   align-items: baseline;
 }
 
 /* line 24, ../scss/section/best.scss */
-.best__content-list {
-  min-width: 300px;
+.best__item {
+  flex: 1 0 300px;
   text-align: center;
 }
 
@@ -296,7 +292,7 @@
 }
 
 /* line 33, ../scss/section/best.scss */
-.best__small-title {
+.best__subtitle {
   font-family: lifehackmedium;
   font-size: 24.1px;
   color: #2f3234;
@@ -349,19 +345,19 @@
   font-weight: normal;
   font-style: normal;
 }
-/* line 9, ../scss/main.scss */
+/* line 8, ../scss/main.scss */
 h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 13, ../scss/main.scss */
+/* line 12, ../scss/main.scss */
 .title {
   font-size: 72px;
   font-family: gagalinregular;
   font-weight: 100;
 }
 
-/* line 19, ../scss/main.scss */
+/* line 18, ../scss/main.scss */
 .container {
   width: 940px;
 }
