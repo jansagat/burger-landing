@@ -1,0 +1,23 @@
+.section-title {
+  font-size: 72px;
+  font-family: gagalinregular;
+  font-weight: 100;
+  margin-bottom: 35px;
+
+  &_color_yellow {
+    color: #f9b43b;
+  }
+
+  &_color_black {
+    color: #2f3234;
+  }
+}
+
+.section__name {
+  font-family: gagalinregular;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

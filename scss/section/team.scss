@@ -1,0 +1,110 @@
+.team {
+  background: url(../img/bg/team-bg.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 650px;
+  position: relative;
+}
+
+.team__container {
+
+}
+
+.team__content {
+  width: 540px;
+  background-color: rgba(#2f3234, .93);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-title {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.team-item_active {
+  .team__trigger {
+    color: #f9b43b;
+  }
+
+  .team-member {
+    height: 100%;
+    overflow: visible;
+  }
+
+  .team__trigger:before {
+    transform: rotate(-180deg);
+  }
+
+}
+
+.team-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team__trigger {
+  text-decoration: none;
+  display: flex;
+  padding: 0;
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 0;
+    width: 0;
+    border: 6px solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom-width: 0px;
+    position: absolute;
+    top: 4px;
+    left: -21px;
+  }
+}
+
+.team-member {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+}
+
+.team-member__photo {
+  overflow: hidden;
+  max-width: 100px;
+  flex: 1 1 30%;
+  margin-right: 15px;
+}
+
+.team-member__photo-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.team-member__data {
+  flex: 1 1 70%;
+}
+
+.team-member__position {
+  span {
+    font-family: ubuntubold;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.team-member__description {
+  p {
+    font-family: ubuntulight;
+    font-size: 14px;
+    color: #fff;
+    max-width: 230px;
+    line-height: 1.71em;
+  }
+}

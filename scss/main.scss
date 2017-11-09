@@ -3,16 +3,12 @@
 @import "section/review";
 @import "section/pagination";
 @import "section/best";
+@import "section/team";
 @import "layout/fonts";
+@import "layout/section";
 
 h2, h3, h4, h5, h6 {
   margin: 0;
-}
-
-.title {
-  font-size: 72px;
-  font-family: gagalinregular;
-  font-weight: 100;
 }
 
 .container {

@@ -37,12 +37,6 @@
 }
 
 /* line 34, ../scss/section/burger.scss */
-.burger__title {
-  color: #f9b43b;
-  margin-bottom: 35px;
-}
-
-/* line 39, ../scss/section/burger.scss */
 .burger__description {
   font-size: 65px;
   font-family: lifehackmedium;
@@ -51,21 +45,21 @@
   line-height: 60px;
 }
 
-/* line 47, ../scss/section/burger.scss */
+/* line 42, ../scss/section/burger.scss */
 .burger__arrow {
   display: flex;
   justify-content: center;
   margin-top: 90px;
 }
 
-/* line 53, ../scss/section/burger.scss */
+/* line 48, ../scss/section/burger.scss */
 .burger__arrow-link {
   background: url(../img/pic/arrow-scroll.png);
   width: 29px;
   height: 14px;
 }
 
-/* line 59, ../scss/section/burger.scss */
+/* line 54, ../scss/section/burger.scss */
 .burger__logo {
   width: 92px;
   height: 69px;
@@ -179,7 +173,7 @@
 }
 
 /* line 41, ../scss/section/review.scss */
-.reviews__name {
+.section__name {
   font-family: gagalinregular;
   font-size: 14px;
   color: #ffffff;
@@ -309,6 +303,118 @@
   text-align: center;
 }
 
+/* line 1, ../scss/section/team.scss */
+.team {
+  background: url(../img/bg/team-bg.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 650px;
+  position: relative;
+}
+
+/* line 13, ../scss/section/team.scss */
+.team__content {
+  width: 540px;
+  background-color: rgba(47, 50, 52, 0.93);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 25, ../scss/section/team.scss */
+.team-title {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+/* line 31, ../scss/section/team.scss */
+.team-item_active .team__trigger {
+  color: #f9b43b;
+}
+/* line 35, ../scss/section/team.scss */
+.team-item_active .team-member {
+  height: 100%;
+  overflow: visible;
+}
+/* line 40, ../scss/section/team.scss */
+.team-item_active .team__trigger:before {
+  transform: rotate(-180deg);
+}
+
+/* line 46, ../scss/section/team.scss */
+.team-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 52, ../scss/section/team.scss */
+.team__trigger {
+  text-decoration: none;
+  display: flex;
+  padding: 0;
+  position: relative;
+}
+/* line 58, ../scss/section/team.scss */
+.team__trigger:before {
+  content: "";
+  height: 0;
+  width: 0;
+  border: 6px solid transparent;
+  border-top-color: #f9b43b;
+  border-bottom-width: 0px;
+  position: absolute;
+  top: 4px;
+  left: -21px;
+}
+
+/* line 71, ../scss/section/team.scss */
+.team-member {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 77, ../scss/section/team.scss */
+.team-member__photo {
+  overflow: hidden;
+  max-width: 100px;
+  flex: 1 1 30%;
+  margin-right: 15px;
+}
+
+/* line 84, ../scss/section/team.scss */
+.team-member__photo-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* line 90, ../scss/section/team.scss */
+.team-member__data {
+  flex: 1 1 70%;
+}
+
+/* line 95, ../scss/section/team.scss */
+.team-member__position span {
+  font-family: ubuntubold;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* line 103, ../scss/section/team.scss */
+.team-member__description p {
+  font-family: ubuntulight;
+  font-size: 14px;
+  color: #fff;
+  max-width: 230px;
+  line-height: 1.71em;
+}
+
 @font-face {
   font-family: 'lifehackmedium';
   src: url("../fonts/lifehack_medium-webfont/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont/lifehack_medium-webfont.woff") format("woff");
@@ -345,19 +451,38 @@
   font-weight: normal;
   font-style: normal;
 }
-/* line 8, ../scss/main.scss */
+/* line 1, ../scss/layout/section.scss */
+.section-title {
+  font-size: 72px;
+  font-family: gagalinregular;
+  font-weight: 100;
+  margin-bottom: 35px;
+}
+/* line 7, ../scss/layout/section.scss */
+.section-title_color_yellow {
+  color: #f9b43b;
+}
+/* line 11, ../scss/layout/section.scss */
+.section-title_color_black {
+  color: #2f3234;
+}
+
+/* line 16, ../scss/layout/section.scss */
+.section__name {
+  font-family: gagalinregular;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 10, ../scss/main.scss */
 h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 12, ../scss/main.scss */
-.title {
-  font-size: 72px;
-  font-family: gagalinregular;
-  font-weight: 100;
-}
-
-/* line 18, ../scss/main.scss */
+/* line 14, ../scss/main.scss */
 .container {
   width: 940px;
 }
