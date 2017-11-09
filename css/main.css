@@ -328,38 +328,37 @@
 /* line 25, ../scss/section/team.scss */
 .team-title {
   margin-top: 75px;
-  margin-bottom: 75px;
 }
 
-/* line 31, ../scss/section/team.scss */
+/* line 30, ../scss/section/team.scss */
 .team-item_active .team__trigger {
   color: #f9b43b;
 }
-/* line 35, ../scss/section/team.scss */
+/* line 34, ../scss/section/team.scss */
 .team-item_active .team-member {
   height: 100%;
   overflow: visible;
 }
-/* line 40, ../scss/section/team.scss */
+/* line 39, ../scss/section/team.scss */
 .team-item_active .team__trigger:before {
   transform: rotate(-180deg);
 }
 
-/* line 46, ../scss/section/team.scss */
+/* line 45, ../scss/section/team.scss */
 .team-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 52, ../scss/section/team.scss */
+/* line 51, ../scss/section/team.scss */
 .team__trigger {
   text-decoration: none;
   display: flex;
   padding: 0;
   position: relative;
 }
-/* line 58, ../scss/section/team.scss */
+/* line 57, ../scss/section/team.scss */
 .team__trigger:before {
   content: "";
   height: 0;
@@ -372,14 +371,14 @@
   left: -21px;
 }
 
-/* line 71, ../scss/section/team.scss */
+/* line 70, ../scss/section/team.scss */
 .team-member {
   display: flex;
   height: 0;
   overflow: hidden;
 }
 
-/* line 77, ../scss/section/team.scss */
+/* line 76, ../scss/section/team.scss */
 .team-member__photo {
   overflow: hidden;
   max-width: 100px;
@@ -387,26 +386,26 @@
   margin-right: 15px;
 }
 
-/* line 84, ../scss/section/team.scss */
+/* line 83, ../scss/section/team.scss */
 .team-member__photo-pic {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-/* line 90, ../scss/section/team.scss */
+/* line 89, ../scss/section/team.scss */
 .team-member__data {
   flex: 1 1 70%;
 }
 
-/* line 95, ../scss/section/team.scss */
+/* line 94, ../scss/section/team.scss */
 .team-member__position span {
   font-family: ubuntubold;
   font-size: 14px;
   color: #fff;
 }
 
-/* line 103, ../scss/section/team.scss */
+/* line 102, ../scss/section/team.scss */
 .team-member__description p {
   font-family: ubuntulight;
   font-size: 14px;
