@@ -575,6 +575,194 @@
   opacity: 1;
 }
 
+/* line 1, ../scss/section/order.scss */
+.order {
+  background: url(../img/bg/order-bg.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 11, ../scss/section/order.scss */
+.order__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 17, ../scss/section/order.scss */
+.order-title {
+  margin: 70px 0;
+}
+
+/* line 21, ../scss/section/order.scss */
+.order__form {
+  display: flex;
+}
+
+/* line 1, ../scss/section/form.scss */
+.form__block-title {
+  font-family: ubuntulight;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 5px;
+  margin-top: 13px;
+}
+
+/* line 9, ../scss/section/form.scss */
+.form__row {
+  display: flex;
+}
+
+/* line 13, ../scss/section/form.scss */
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+}
+
+/* line 18, ../scss/section/form.scss */
+.form_block_type_input {
+  position: relative;
+  display: flex;
+}
+
+/* line 23, ../scss/section/form.scss */
+.form__block-title_type_radio {
+  display: inline-block;
+  width: 146px;
+  margin-left: -12px;
+}
+
+/* line 29, ../scss/section/form.scss */
+.form__block-title_type_radio:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 8px;
+}
+
+/* line 40, ../scss/section/form.scss */
+.form__block-title_type_radio:after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #e35028;
+  opacity: 0;
+  position: absolute;
+  top: 18px;
+  left: 5px;
+}
+
+/* line 53, ../scss/section/form.scss */
+input[type="radio"] {
+  opacity: 0;
+}
+
+/* line 57, ../scss/section/form.scss */
+input[type="radio"]:checked + .form__block-title_type_radio:after {
+  opacity: 1;
+}
+
+/* line 61, ../scss/section/form.scss */
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+/* line 65, ../scss/section/form.scss */
+input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
+  width: 11px;
+  height: 9px;
+}
+
+/* line 70, ../scss/section/form.scss */
+.form__block-title_type_checkbox {
+  margin-left: -12px;
+}
+
+/* line 74, ../scss/section/form.scss */
+.form__block-title_type_checkbox:before {
+  content: '';
+  background: #ffffff;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: bottom;
+}
+
+/* line 84, ../scss/section/form.scss */
+.form__block-title_type_checkbox:after {
+  content: '';
+  background: url(../img/pic/checked.png) no-repeat;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 17px;
+  left: 3px;
+}
+
+/* line 95, ../scss/section/form.scss */
+.form__input {
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+}
+
+/* line 102, ../scss/section/form.scss */
+.form__column {
+  width: 50%;
+}
+
+/* line 106, ../scss/section/form.scss */
+.form__textarea {
+  height: 81px;
+  width: 100%;
+  resize: none;
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+}
+
+/* line 115, ../scss/section/form.scss */
+.form__button {
+  margin-top: 12px;
+  font-size: 13px;
+  font-family: ubuntumedium;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: #e45028;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 0px;
+}
+
+/* line 127, ../scss/section/form.scss */
+.form__button_reset {
+  margin-top: 12px;
+  font-size: 14px;
+  font-family: ubuntulight;
+  color: #ffffff;
+  text-transform: capitalize;
+  padding: 12px 16px;
+  border: 0px;
+  background-color: transparent;
+}
+
+/* line 138, ../scss/section/form.scss */
+.form__block_flex_off {
+  flex: 0;
+}
+
 @font-face {
   font-family: 'lifehackmedium';
   src: url("../fonts/lifehack_medium-webfont/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont/lifehack_medium-webfont.woff") format("woff");
@@ -641,12 +829,12 @@
   margin-bottom: 15px;
 }
 
-/* line 13, ../scss/main.scss */
+/* line 15, ../scss/main.scss */
 h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 17, ../scss/main.scss */
+/* line 19, ../scss/main.scss */
 .container {
   width: 940px;
 }
