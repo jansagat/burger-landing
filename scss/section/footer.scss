@@ -1,0 +1,60 @@
+.footer {
+  background: url(../img/bg/footer-bg.jpg) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+  margin: 0 70px;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__address {
+  font-family: ubuntulight;
+  font-size: 14px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer__tel {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: ubuntubold;
+  color: #e45028;
+  background: url(../img/pic/phone.png) left center no-repeat ;
+
+  & span {
+    margin-left: 19px;
+  }
+}
+
+.footer__socials {
+  display: inline-block;
+  text-align: right;
+}
+
+.footer__socials-link {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.footer__socials-icon {
+  opacity: .3;
+
+  &:hover {
+    opacity: 1;
+  }
+}

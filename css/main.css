@@ -497,6 +497,84 @@
   overflow: visible;
 }
 
+/* line 1, ../scss/section/map.scss */
+.map {
+  background: url(../img/bg/map-bg.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 650px;
+  position: relative;
+}
+
+/* line 1, ../scss/section/footer.scss */
+.footer {
+  background: url(../img/bg/footer-bg.jpg) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 10, ../scss/section/footer.scss */
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+  margin: 0 70px;
+}
+
+/* line 18, ../scss/section/footer.scss */
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 23, ../scss/section/footer.scss */
+.footer__address {
+  font-family: ubuntulight;
+  font-size: 14px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* line 31, ../scss/section/footer.scss */
+.footer__tel {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: ubuntubold;
+  color: #e45028;
+  background: url(../img/pic/phone.png) left center no-repeat;
+}
+/* line 39, ../scss/section/footer.scss */
+.footer__tel span {
+  margin-left: 19px;
+}
+
+/* line 44, ../scss/section/footer.scss */
+.footer__socials {
+  display: inline-block;
+  text-align: right;
+}
+
+/* line 49, ../scss/section/footer.scss */
+.footer__socials-link {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+/* line 54, ../scss/section/footer.scss */
+.footer__socials-icon {
+  opacity: .3;
+}
+/* line 57, ../scss/section/footer.scss */
+.footer__socials-icon:hover {
+  opacity: 1;
+}
+
 @font-face {
   font-family: 'lifehackmedium';
   src: url("../fonts/lifehack_medium-webfont/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont/lifehack_medium-webfont.woff") format("woff");
@@ -563,12 +641,12 @@
   margin-bottom: 15px;
 }
 
-/* line 11, ../scss/main.scss */
+/* line 13, ../scss/main.scss */
 h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 15, ../scss/main.scss */
+/* line 17, ../scss/main.scss */
 .container {
   width: 940px;
 }
