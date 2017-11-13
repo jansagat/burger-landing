@@ -414,6 +414,89 @@
   line-height: 1.71em;
 }
 
+/* line 1, ../scss/section/menu.scss */
+.menu {
+  background: url(../img/bg/menu-bg.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 650px;
+}
+
+/* line 8, ../scss/section/menu.scss */
+.menu__content {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+/* line 15, ../scss/section/menu.scss */
+.menu__title {
+  top: 115px;
+  left: 95px;
+  position: absolute;
+}
+
+/* line 21, ../scss/section/menu.scss */
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 32, ../scss/section/menu.scss */
+.menu__item {
+  display: flex;
+}
+
+/* line 36, ../scss/section/menu.scss */
+.menu__link {
+  position: relative;
+  display: flex;
+  font-family: Gagalin;
+  font-size: 40px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* line 45, ../scss/section/menu.scss */
+.menu__link span {
+  white-space: nowrap;
+  position: absolute;
+  bottom: -32px;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+
+/* line 54, ../scss/section/menu.scss */
+.menu__text {
+  box-sizing: border-box;
+  width: 0;
+  padding: 0;
+  background: rgba(47, 50, 52, 0.93);
+  overflow: hidden;
+}
+/* line 61, ../scss/section/menu.scss */
+.menu__text p {
+  font-family: ubuntulight;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.71em;
+  overflow: hidden;
+}
+
+/* line 70, ../scss/section/menu.scss */
+.menu__item_active .menu__text {
+  width: 545px;
+  padding: 35px;
+  overflow: visible;
+}
+
 @font-face {
   font-family: 'lifehackmedium';
   src: url("../fonts/lifehack_medium-webfont/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont/lifehack_medium-webfont.woff") format("woff");
@@ -465,8 +548,12 @@
 .section-title_color_black {
   color: #2f3234;
 }
+/* line 15, ../scss/layout/section.scss */
+.section-title_color_white {
+  color: #ffffff;
+}
 
-/* line 16, ../scss/layout/section.scss */
+/* line 20, ../scss/layout/section.scss */
 .section__name {
   font-family: gagalinregular;
   font-size: 14px;
@@ -476,12 +563,12 @@
   margin-bottom: 15px;
 }
 
-/* line 10, ../scss/main.scss */
+/* line 11, ../scss/main.scss */
 h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 14, ../scss/main.scss */
+/* line 15, ../scss/main.scss */
 .container {
   width: 940px;
 }
