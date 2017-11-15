@@ -294,6 +294,18 @@ h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
+/* line 62, ../scss/section/nav.scss */
+.nav__hamburger-menu {
+  display: none;
+  margin-left: 1.875rem;
+}
+@media screen and (max-width: 768px) {
+  /* line 62, ../scss/section/nav.scss */
+  .nav__hamburger-menu {
+    display: block;
+  }
+}
+
 /* line 1, ../scss/section/review.scss */
 .reviews {
   height: 100vh;

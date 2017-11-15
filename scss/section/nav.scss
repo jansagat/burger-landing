@@ -58,3 +58,12 @@
   display: inline-block;
   text-decoration: none;
 }
+
+.nav__hamburger-menu {
+  display: none;
+  margin-left: rem(30px);
+
+  @include tablets {
+    display: block;
+  }
+}
