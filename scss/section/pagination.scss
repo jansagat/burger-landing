@@ -1,22 +1,26 @@
 .pagination {
   list-style: none;
   position: fixed;
-  top: 89px;
-  right: 85px;
+  top: rem(89px);
+  right: rem(85px);
   margin: 0;
   padding: 0;
+
+  @include tablets() {
+    display: none;
+  }
 }
 
 .pagination__link:before{
   content: '';
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   border-radius: 50%;
   position: absolute;
-  top: -5.3px;
-  left: -5.5px;
-  border: 1px solid transparent;
+  top: rem(-5.3px);
+  left: rem(-5.5px);
+  border: rem(1px) solid transparent;
 }
 
 .pagination__link:hover:before, .pagination__link_active:before{
@@ -26,8 +30,8 @@
 .pagination__link {
   position: relative;
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: rem(6px);
+  height: rem(6px);
   background: #fff;
   border-radius: 50%;
 }

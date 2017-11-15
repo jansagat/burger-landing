@@ -11,43 +11,63 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 58px;
-  margin: 0 70px;
+  height: rem(58px);
+  margin: 0 rem(70px);
+
+  @include tablets {
+    margin: 0 rem(24px);
+  }
+
+  @include phones {
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .footer__contacts {
   display: flex;
   flex-direction: column;
+
+  @include phones {
+    margin: 10px 0;
+  }
 }
 
 .footer__address {
   font-family: ubuntulight;
-  font-size: 14px;
+  font-size: rem(14px);
   color: #ffffff;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: rem(8px);
 }
 
 .footer__tel {
-  display: block;
-  text-decoration: none;
-  font-size: 14px;
+  font-size: rem(14px);
   font-family: ubuntubold;
   color: #e45028;
-  background: url(../img/pic/phone.png) left center no-repeat ;
+}
 
-  & span {
-    margin-left: 19px;
-  }
+.footer__tel-link {
+  display: block;
+  text-decoration: none;
+}
+
+.footer__tel-img {
+  margin-right: 5px;
 }
 
 .footer__socials {
   display: inline-block;
   text-align: right;
+
+  @include phones {
+    margin-bottom: 10px;
+  }
 }
 
 .footer__socials-link {
-  margin-right: 20px;
+  margin-right: rem(20px);
   text-decoration: none;
 }
 

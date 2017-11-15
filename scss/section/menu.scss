@@ -2,7 +2,7 @@
   background: url(../img/bg/menu-bg.jpg) center center no-repeat;
   background-size: cover;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .menu__content {
@@ -13,8 +13,8 @@
 }
 
 .menu__title {
-  top: 115px;
-  left: 95px;
+  top: rem(115px);
+  left: rem(95px);
   position: absolute;
 }
 
@@ -27,6 +27,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
 }
 
 .menu__item {
@@ -37,7 +38,7 @@
   position: relative;
   display: flex;
   font-family: Gagalin;
-  font-size: 40px;
+  font-size: rem(40px);
   text-align: center;
   color: #ffffff;
   text-decoration: none;
@@ -45,7 +46,7 @@
   & span {
     white-space: nowrap;
     position: absolute;
-    bottom: -32px;
+    bottom: rem(-32px);
     transform: rotate(-90deg);
     transform-origin: top left;
   }
@@ -60,7 +61,7 @@
 
   p {
     font-family: ubuntulight;
-    font-size: 14px;
+    font-size: rem(14px);
     color: #ffffff;
     line-height: 1.71em;
     overflow: hidden;
@@ -68,7 +69,15 @@
 }
 
 .menu__item_active .menu__text {
-  width: 545px;
-  padding: 35px;
+  width: rem(545px);
+  padding: rem(35px);
   overflow: visible;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    padding: rem(10px);
+  }
 }

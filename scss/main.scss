@@ -1,3 +1,24 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+//resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+//media
+@import "_misc/media";
+
+//setups
+@import "_misc/fonts";
+@import "_misc/section";
+@import "_misc/layout";
+
+//sections
 @import "section/burger";
 @import "section/nav";
 @import "section/review";
@@ -9,14 +30,3 @@
 @import "section/footer";
 @import "section/order";
 @import "section/form";
-@import "layout/fonts";
-@import "layout/section";
-
-h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-.container {
-  width: 940px;
-}
-

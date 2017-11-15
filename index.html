@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Burger</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -29,15 +30,15 @@
                     </nav>
                 </header>
                 <div class="burger__content">
-                    <img src="img/pic/burger-picture.png" alt="Бургер" class="burger__image">
+                    <div class="burger__image-parent"><img src="img/pic/burger-picture.png" alt="Бургер" class="burger__image"></div>
                     <div class="burger__text">
                         <h2 class="section-title section-title_color_yellow">мы делаем</h2>
                         <h3 class="burger__description">натуральные бургеры</h3>
                     </div>
                 </div>
-                <div class="burger__arrow">
-                    <a href="#" class="burger__arrow-link"></a>
-                </div>
+                <a href="#" class="burger__arrow">
+                    <img src="./img/pic/arrow-scroll.png" class="burger__arrow-link">
+                </a>
             </div>
         </section>
         <section class="section best">
@@ -45,22 +46,28 @@
                 <h2 class="section-title section-title_color_black">мы лучшие</h2>
                 <ul class="best-list">
                     <li class="best__item">
-                        <img src="img/pic/meat.png" alt="мясо" class="best__image">
-                        <h5 class="best__subtitle">100% свежее мясо</h5>
-                        <span class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                        <div class="best__image-parent"><img src="img/pic/meat.png" alt="мясо" class="best__image"></div>
+                        <div class="best__content">
+                            <h5 class="best__subtitle">100% свежее мясо</h5>
+                            <span class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
                             Ямб неравномерен.</span>
+                        </div>
                     </li>
                     <li class="best__item">
-                        <img src="img/pic/hand.png" alt="ручная сборка" class="best__image">
-                        <h5 class="best__subtitle">Ручная сборка</h5>
-                        <span class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет
-                            собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</span>
+                        <div class="best__image-parent"><img src="img/pic/hand.png" alt="ручная сборка" class="best__image"></div>
+                        <div class="best__content">
+                            <h5 class="best__subtitle">Ручная сборка</h5>
+                            <span class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет
+                                собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</span>
+                        </div>
                     </li>
                     <li class="best__item">
-                        <img src="img/pic/natural.png" alt="натуральные ингредиенты" class="best__image">
-                        <h5 class="best__subtitle">Натуральные ингредиенты</h5>
-                        <span class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет
-                            собой анапест</span>
+                        <div class="best__image-parent"><img src="img/pic/natural.png" alt="натуральные ингредиенты" class="best__image"></div>
+                        <div class="best__content">
+                            <h5 class="best__subtitle">Натуральные ингредиенты</h5>
+                            <span class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет
+                                собой анапест</span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -174,7 +181,7 @@
             <ul class="reviews-list">
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/1.jpg)">
                     <div class="reviews__description">
-                        <h6 class="section__name">Константин Спилберг</h6>
+                        <h6 class="section__name reviews__name">Константин Спилберг</h6>
                         <span class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                         а сыр таким расплавленным.</span>
@@ -183,7 +190,7 @@
                 </li>
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/2.jpg)">
                     <div class="reviews__description">
-                        <h6 class="section__name">Константин Спилберг</h6>
+                        <h6 class="section__name reviews__name">Константин Спилберг</h6>
                         <span class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                         а сыр таким расплавленным.</span>
@@ -192,7 +199,7 @@
                 </li>
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/3.jpg)">
                     <div class="reviews__description">
-                        <h6 class="section__name">Константин Спилберг</h6>
+                        <h6 class="section__name reviews__name">Константин Спилберг</h6>
                         <span class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                         а сыр таким расплавленным.</span>
@@ -201,7 +208,7 @@
                 </li>
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/4.jpg)">
                     <div class="reviews__description">
-                        <h6 class="section__name">Константин Спилберг</h6>
+                        <h6 class="section__name reviews__name">Константин Спилберг</h6>
                         <span class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                         а сыр таким расплавленным.</span>
@@ -210,7 +217,7 @@
                 </li>
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/5.jpg)">
                     <div class="reviews__description">
-                        <h6 class="section__name">Константин Спилберг</h6>
+                        <h6 class="section__name reviews__name">Константин Спилберг</h6>
                         <span class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                         а сыр таким расплавленным.</span>
@@ -219,7 +226,7 @@
                 </li>
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/6.jpg)">
                     <div class="reviews__description">
-                        <h6 class="section__name">Константин Спилберг</h6>
+                        <h6 class="section__name reviews__name">Константин Спилберг</h6>
                         <span class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                         а сыр таким расплавленным.</span>
@@ -228,7 +235,7 @@
                 </li>
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/7.jpg)">
                     <div class="reviews__description">
-                        <h6 class="section__name">Константин Спилберг</h6>
+                        <h6 class="section__name reviews__name">Константин Спилберг</h6>
                         <span class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                         а сыр таким расплавленным.</span>
@@ -237,7 +244,7 @@
                 </li>
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/8.jpg)">
                     <div class="reviews__description">
-                        <h6 class="section__name">Константин Спилберг</h6>
+                        <h6 class="section__name reviews__name">Константин Спилберг</h6>
                         <span class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
                         а сыр таким расплавленным.</span>
@@ -326,7 +333,10 @@
                 <div class="footer__container">
                     <div class="footer__contacts">
                         <span class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</span>
-                        <a href="tel:+78123771377" class="footer__tel"><span>+7 (812) 377-13-77</span></a>
+                        <a href="tel:+78123771377" class="footer__tel-link">
+                            <img src="./img/pic/phone.png" alt="телефон" class="footer__tel-img">
+                            <span class="footer__tel">+7 (812) 377-13-77</span>
+                        </a>
                     </div>
                     <div class="footer__socials">
                         <a href="#" class="footer__socials-link">
