@@ -2,12 +2,8 @@
   background: url(../img/bg/team-bg.jpg) center center no-repeat;
   background-size: cover;
   height: 100vh;
-  min-height: rem(650px);
+  min-height: 40.625rem;
   position: relative;
-}
-
-.team__container {
-
 }
 
 .team__content {
@@ -30,7 +26,12 @@
   margin-top: rem(75px);
 
   @include tablets {
-    margin-bottom: rem(75px);
+    margin-top: rem(35px);
+  }
+
+  @include phones {
+    margin-top: 2.7rem;
+    margin-bottom: 2.7rem;
   }
 }
 

@@ -17,8 +17,12 @@
     color: #ffffff;
   }
 
-  @include tablets() {
+  @include tablets {
     font-size: rem(67px);
+  }
+
+  @include phones {
+    font-size: rem(50px);
   }
 }
 

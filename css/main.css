@@ -60,8 +60,14 @@
     font-size: 4.1875rem;
   }
 }
+@media screen and (max-width: 480px) {
+  /* line 1, ../scss/_misc/section.scss */
+  .section-title {
+    font-size: 3.125rem;
+  }
+}
 
-/* line 25, ../scss/_misc/section.scss */
+/* line 29, ../scss/_misc/section.scss */
 .section__name {
   font-family: gagalinregular;
   font-size: 0.875rem;
@@ -543,7 +549,7 @@ h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-/* line 13, ../scss/section/team.scss */
+/* line 9, ../scss/section/team.scss */
 .team__content {
   background-color: rgba(47, 50, 52, 0.93);
   position: absolute;
@@ -556,65 +562,72 @@ h2, h3, h4, h5, h6 {
   align-items: center;
 }
 @media screen and (max-width: 768px) {
-  /* line 13, ../scss/section/team.scss */
+  /* line 9, ../scss/section/team.scss */
   .team__content {
     left: 0;
   }
 }
 
-/* line 29, ../scss/section/team.scss */
+/* line 25, ../scss/section/team.scss */
 .team-title {
   margin-top: 4.6875rem;
 }
 @media screen and (max-width: 768px) {
-  /* line 29, ../scss/section/team.scss */
+  /* line 25, ../scss/section/team.scss */
   .team-title {
-    margin-bottom: 4.6875rem;
+    margin-top: 2.1875rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 25, ../scss/section/team.scss */
+  .team-title {
+    margin-top: 2.7rem;
+    margin-bottom: 2.7rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* line 37, ../scss/section/team.scss */
+  /* line 38, ../scss/section/team.scss */
   .team__trigger {
     font-size: 24px;
   }
 }
 
-/* line 44, ../scss/section/team.scss */
+/* line 45, ../scss/section/team.scss */
 .team-item_active .team__trigger {
   color: #f9b43b;
 }
-/* line 48, ../scss/section/team.scss */
+/* line 49, ../scss/section/team.scss */
 .team-item_active .team-member {
   height: 100%;
   overflow: visible;
 }
-/* line 53, ../scss/section/team.scss */
+/* line 54, ../scss/section/team.scss */
 .team-item_active .team__trigger:before {
   transform: rotate(-180deg);
 }
 
-/* line 59, ../scss/section/team.scss */
+/* line 60, ../scss/section/team.scss */
 .team-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 59, ../scss/section/team.scss */
+  /* line 60, ../scss/section/team.scss */
   .team-list {
     text-align: center;
   }
 }
 
-/* line 69, ../scss/section/team.scss */
+/* line 70, ../scss/section/team.scss */
 .team__trigger {
   text-decoration: none;
   display: flex;
   padding: 0;
   position: relative;
 }
-/* line 75, ../scss/section/team.scss */
+/* line 76, ../scss/section/team.scss */
 .team__trigger:before {
   content: "";
   height: 0;
@@ -628,26 +641,26 @@ h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
 }
 @media screen and (max-width: 768px) {
-  /* line 69, ../scss/section/team.scss */
+  /* line 70, ../scss/section/team.scss */
   .team__trigger {
     display: inline-block;
   }
 }
 
-/* line 93, ../scss/section/team.scss */
+/* line 94, ../scss/section/team.scss */
 .team-member {
   display: flex;
   height: 0;
   overflow: hidden;
 }
 @media screen and (max-width: 768px) {
-  /* line 93, ../scss/section/team.scss */
+  /* line 94, ../scss/section/team.scss */
   .team-member {
     flex-direction: column;
   }
 }
 
-/* line 103, ../scss/section/team.scss */
+/* line 104, ../scss/section/team.scss */
 .team-member__photo {
   overflow: hidden;
   max-width: 6.25rem;
@@ -655,38 +668,38 @@ h2, h3, h4, h5, h6 {
   margin-right: 0.9375rem;
 }
 @media screen and (max-width: 768px) {
-  /* line 103, ../scss/section/team.scss */
+  /* line 104, ../scss/section/team.scss */
   .team-member__photo {
     max-width: 100%;
   }
 }
 
-/* line 114, ../scss/section/team.scss */
+/* line 115, ../scss/section/team.scss */
 .team-member__photo-pic {
   width: 6.25rem;
   height: 6.25rem;
   border-radius: 50%;
 }
 
-/* line 120, ../scss/section/team.scss */
+/* line 121, ../scss/section/team.scss */
 .team-member__data {
   flex: 1 1 70%;
 }
 
-/* line 125, ../scss/section/team.scss */
+/* line 126, ../scss/section/team.scss */
 .team-member__position span {
   font-family: ubuntubold;
   font-size: 0.875rem;
   color: #fff;
 }
 @media screen and (max-width: 768px) {
-  /* line 124, ../scss/section/team.scss */
+  /* line 125, ../scss/section/team.scss */
   .team-member__position {
     margin-top: 8px;
   }
 }
 
-/* line 137, ../scss/section/team.scss */
+/* line 138, ../scss/section/team.scss */
 .team-member__description p {
   font-family: ubuntulight;
   font-size: 0.875rem;
@@ -695,7 +708,7 @@ h2, h3, h4, h5, h6 {
   line-height: 1.71em;
 }
 @media screen and (max-width: 768px) {
-  /* line 137, ../scss/section/team.scss */
+  /* line 138, ../scss/section/team.scss */
   .team-member__description p {
     max-width: 22.6875rem;
   }
@@ -926,6 +939,13 @@ h2, h3, h4, h5, h6 {
 .order-title {
   margin: 4.375rem 0;
 }
+@media screen and (max-width: 768px) {
+  /* line 17, ../scss/section/order.scss */
+  .order-title {
+    margin-top: 2.1875rem;
+    margin-bottom: 2.1875rem;
+  }
+}
 @media screen and (max-width: 480px) {
   /* line 17, ../scss/section/order.scss */
   .order-title {
@@ -934,12 +954,12 @@ h2, h3, h4, h5, h6 {
   }
 }
 
-/* line 26, ../scss/section/order.scss */
+/* line 31, ../scss/section/order.scss */
 .order__form {
   display: flex;
 }
 @media screen and (max-width: 768px) {
-  /* line 26, ../scss/section/order.scss */
+  /* line 31, ../scss/section/order.scss */
   .order__form {
     flex-direction: column;
     align-items: center;
@@ -948,6 +968,7 @@ h2, h3, h4, h5, h6 {
 
 /* line 1, ../scss/section/form.scss */
 .form__block-title {
+  display: block;
   font-family: ubuntulight;
   font-size: 0.875rem;
   color: #ffffff;
@@ -955,43 +976,43 @@ h2, h3, h4, h5, h6 {
   margin-top: 0.8125rem;
 }
 
-/* line 9, ../scss/section/form.scss */
+/* line 10, ../scss/section/form.scss */
 .form__row {
   display: flex;
 }
 @media screen and (max-width: 480px) {
-  /* line 9, ../scss/section/form.scss */
+  /* line 10, ../scss/section/form.scss */
   .form__row {
     justify-content: center;
   }
 }
 
-/* line 17, ../scss/section/form.scss */
+/* line 18, ../scss/section/form.scss */
 .form__block {
   flex: 1;
   margin-right: 1.25rem;
 }
 
-/* line 22, ../scss/section/form.scss */
+/* line 23, ../scss/section/form.scss */
 .form_block_type_input {
   position: relative;
   display: flex;
 }
 @media screen and (max-width: 480px) {
-  /* line 22, ../scss/section/form.scss */
+  /* line 23, ../scss/section/form.scss */
   .form_block_type_input {
     justify-content: center;
   }
 }
 
-/* line 31, ../scss/section/form.scss */
+/* line 32, ../scss/section/form.scss */
 .form__block-title_type_radio {
   display: inline-block;
   width: 9.125rem;
   margin-left: -0.75rem;
 }
 
-/* line 37, ../scss/section/form.scss */
+/* line 38, ../scss/section/form.scss */
 .form__block-title_type_radio:before {
   content: '';
   width: 0.9375rem;
@@ -1003,7 +1024,7 @@ h2, h3, h4, h5, h6 {
   margin-right: 0.5rem;
 }
 
-/* line 48, ../scss/section/form.scss */
+/* line 49, ../scss/section/form.scss */
 .form__block-title_type_radio:after {
   content: '';
   width: 0.4375rem;
@@ -1017,33 +1038,33 @@ h2, h3, h4, h5, h6 {
   left: 0.3125rem;
 }
 
-/* line 61, ../scss/section/form.scss */
+/* line 62, ../scss/section/form.scss */
 input[type="radio"] {
   opacity: 0;
 }
 
-/* line 65, ../scss/section/form.scss */
+/* line 66, ../scss/section/form.scss */
 input[type="radio"]:checked + .form__block-title_type_radio:after {
   opacity: 1;
 }
 
-/* line 69, ../scss/section/form.scss */
+/* line 70, ../scss/section/form.scss */
 input[type="checkbox"] {
   opacity: 0;
 }
 
-/* line 73, ../scss/section/form.scss */
+/* line 74, ../scss/section/form.scss */
 input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
   width: 0.6875rem;
   height: 0.5625rem;
 }
 
-/* line 78, ../scss/section/form.scss */
+/* line 79, ../scss/section/form.scss */
 .form__block-title_type_checkbox {
   margin-left: -0.75rem;
 }
 
-/* line 82, ../scss/section/form.scss */
+/* line 83, ../scss/section/form.scss */
 .form__block-title_type_checkbox:before {
   content: '';
   background: #ffffff;
@@ -1054,7 +1075,7 @@ input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
   vertical-align: bottom;
 }
 
-/* line 92, ../scss/section/form.scss */
+/* line 93, ../scss/section/form.scss */
 .form__block-title_type_checkbox:after {
   content: '';
   background: url(../img/pic/checked.png) no-repeat;
@@ -1066,7 +1087,7 @@ input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
   left: 0.1875rem;
 }
 
-/* line 103, ../scss/section/form.scss */
+/* line 104, ../scss/section/form.scss */
 .form__input {
   width: 100%;
   border-radius: 0.25rem;
@@ -1074,18 +1095,18 @@ input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
   padding: 0.3125rem;
 }
 
-/* line 110, ../scss/section/form.scss */
+/* line 111, ../scss/section/form.scss */
 .form__column {
   width: 50%;
 }
 @media screen and (max-width: 480px) {
-  /* line 110, ../scss/section/form.scss */
+  /* line 111, ../scss/section/form.scss */
   .form__column {
     width: 100%;
   }
 }
 
-/* line 118, ../scss/section/form.scss */
+/* line 119, ../scss/section/form.scss */
 .form__textarea {
   height: 5.0625rem;
   width: 100%;
@@ -1095,7 +1116,7 @@ input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
   padding: 0.3125rem;
 }
 
-/* line 127, ../scss/section/form.scss */
+/* line 128, ../scss/section/form.scss */
 .form__button {
   margin-top: 0.75rem;
   font-size: 0.8125rem;
@@ -1108,7 +1129,7 @@ input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
   border: 0rem;
 }
 
-/* line 139, ../scss/section/form.scss */
+/* line 140, ../scss/section/form.scss */
 .form__button_reset {
   margin-top: 0.75rem;
   font-size: 0.875rem;
@@ -1120,7 +1141,7 @@ input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
   background-color: transparent;
 }
 
-/* line 150, ../scss/section/form.scss */
+/* line 151, ../scss/section/form.scss */
 .form__block_flex_off {
   flex: 0;
 }

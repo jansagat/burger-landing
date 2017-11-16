@@ -17,6 +17,11 @@
 .order-title {
   margin: rem(70px) 0;
 
+  @include tablets {
+    margin-top: rem(35px);
+    margin-bottom: rem(35px);
+  }
+
   @include phones {
     text-align: center;
     margin: rem(35px) 0;
