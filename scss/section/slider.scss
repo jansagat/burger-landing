@@ -1,0 +1,146 @@
+.slider {
+  height: 100vh;
+  min-height: rem(650px);
+  background: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+}
+
+.slider__container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.slider__arrow {
+  width: 45px;
+}
+
+.slider__arrow-link {
+  text-decoration: none;
+  display: block;
+}
+
+.slider__content {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.slider__col {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include tablets {
+    align-items: center;
+  }
+
+  @include phones {
+    position: initial;
+    text-align: center;
+  }
+}
+
+.slider__col-image {
+  padding-right: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider__image {
+  max-width: 100%;
+}
+
+.slider-title {
+  line-height: 1em;
+  margin-bottom: 25px;
+
+  @include phones {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.slider__text {
+  font-family: ubuntulight;
+  font-size: rem(14px);
+  color: #fff;
+  line-height: 1.71em;
+}
+
+.slider__price {
+  font-family: Gagalin;
+  font-size: 72px;
+  color: #e35028;
+  letter-spacing: -0.025em;
+}
+
+.slider__currency {
+  font-family: gagalinregular;
+  font-size: 30px;
+  color: #e35028;
+  letter-spacing: -0.025em;
+}
+
+.slider__composition {
+  position: absolute;
+  top: -61px;
+  left: 0;
+  text-decoration: none;
+  background-color: rgba(227, 80, 40, .4);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px;
+  border-radius: 4px;
+
+  @include tablets {
+    top: 0;
+  }
+
+  @include phones {
+    top: 15px;
+  }
+}
+
+.slider__composition-text {
+  font-family: gagalinregular;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.slider__kcal {
+  text-align: center;
+  width: 62px;
+  height: 84px;
+  background: url(../img/pic/kkal.png) no-repeat;
+
+  @include tablets {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @include phones {
+    top: 15px;
+  }
+}
+
+.slider__kcal-text {
+  font-family: gagalinregular;
+  font-size: 14px;
+  color: #ffffff;
+  opacity: .5;
+  margin-top: 14px;
+  display: inline-block;
+}
+
+.slider__kcal-value {
+  font-size: 20px;
+  margin-top: 24px;
+}

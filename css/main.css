@@ -1150,3 +1150,245 @@ input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
 .form__block_flex_off {
   flex: 0;
 }
+
+/* line 1, ../scss/section/hamburger.scss */
+.hamburger-menu__list {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(47, 50, 52, 0.99);
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+/* line 16, ../scss/section/hamburger.scss */
+.hamburger-menu__item {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 2.291em;
+}
+
+/* line 22, ../scss/section/hamburger.scss */
+.hamburger-menu__item:first-child {
+  margin-top: 260px;
+}
+@media screen and (max-width: 480px) {
+  /* line 22, ../scss/section/hamburger.scss */
+  .hamburger-menu__item:first-child {
+    margin-top: 185px;
+  }
+}
+
+/* line 30, ../scss/section/hamburger.scss */
+.hamburger-menu__item:last-child:after {
+  content: '';
+  width: 0;
+  height: 0;
+}
+
+/* line 36, ../scss/section/hamburger.scss */
+.hamburger-menu__item:after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  position: absolute;
+  top: 2.291em;
+  left: 50%;
+  border-radius: 50%;
+}
+
+/* line 47, ../scss/section/hamburger.scss */
+.hamburger-menu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: ubunturegular;
+  color: #ffffff;
+  display: block;
+}
+
+/* line 1, ../scss/section/slider.scss */
+.slider {
+  height: 100vh;
+  min-height: 40.625rem;
+  background: -moz-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: -webkit-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: -ms-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+}
+
+/* line 9, ../scss/section/slider.scss */
+.slider__container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+/* line 15, ../scss/section/slider.scss */
+.slider__arrow {
+  width: 45px;
+}
+
+/* line 19, ../scss/section/slider.scss */
+.slider__arrow-link {
+  text-decoration: none;
+  display: block;
+}
+
+/* line 24, ../scss/section/slider.scss */
+.slider__content {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  /* line 24, ../scss/section/slider.scss */
+  .slider__content {
+    flex-direction: column;
+  }
+}
+
+/* line 32, ../scss/section/slider.scss */
+.slider__col {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  /* line 32, ../scss/section/slider.scss */
+  .slider__col {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 32, ../scss/section/slider.scss */
+  .slider__col {
+    position: initial;
+    text-align: center;
+  }
+}
+
+/* line 49, ../scss/section/slider.scss */
+.slider__col-image {
+  padding-right: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 55, ../scss/section/slider.scss */
+.slider__image {
+  max-width: 100%;
+}
+
+/* line 59, ../scss/section/slider.scss */
+.slider-title {
+  line-height: 1em;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 480px) {
+  /* line 59, ../scss/section/slider.scss */
+  .slider-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* line 69, ../scss/section/slider.scss */
+.slider__text {
+  font-family: ubuntulight;
+  font-size: 0.875rem;
+  color: #fff;
+  line-height: 1.71em;
+}
+
+/* line 76, ../scss/section/slider.scss */
+.slider__price {
+  font-family: Gagalin;
+  font-size: 72px;
+  color: #e35028;
+  letter-spacing: -0.025em;
+}
+
+/* line 83, ../scss/section/slider.scss */
+.slider__currency {
+  font-family: gagalinregular;
+  font-size: 30px;
+  color: #e35028;
+  letter-spacing: -0.025em;
+}
+
+/* line 90, ../scss/section/slider.scss */
+.slider__composition {
+  position: absolute;
+  top: -61px;
+  left: 0;
+  text-decoration: none;
+  background-color: rgba(227, 80, 40, 0.4);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 768px) {
+  /* line 90, ../scss/section/slider.scss */
+  .slider__composition {
+    top: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 90, ../scss/section/slider.scss */
+  .slider__composition {
+    top: 15px;
+  }
+}
+
+/* line 110, ../scss/section/slider.scss */
+.slider__composition-text {
+  font-family: gagalinregular;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+/* line 117, ../scss/section/slider.scss */
+.slider__kcal {
+  text-align: center;
+  width: 62px;
+  height: 84px;
+  background: url(../img/pic/kkal.png) no-repeat;
+}
+@media screen and (max-width: 768px) {
+  /* line 117, ../scss/section/slider.scss */
+  .slider__kcal {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 117, ../scss/section/slider.scss */
+  .slider__kcal {
+    top: 15px;
+  }
+}
+
+/* line 134, ../scss/section/slider.scss */
+.slider__kcal-text {
+  font-family: gagalinregular;
+  font-size: 14px;
+  color: #ffffff;
+  opacity: .5;
+  margin-top: 14px;
+  display: inline-block;
+}
+
+/* line 143, ../scss/section/slider.scss */
+.slider__kcal-value {
+  font-size: 20px;
+  margin-top: 24px;
+}
