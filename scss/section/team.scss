@@ -1,0 +1,149 @@
+.team {
+  background: url(../img/bg/team-bg.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 40.625rem;
+  position: relative;
+}
+
+.team__content {
+  background-color: rgba(#2f3234, .93);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablets {
+    left: 0;
+  }
+}
+
+.team-title {
+  margin-top: rem(75px);
+
+  @include tablets {
+    margin-top: rem(35px);
+  }
+
+  @include phones {
+    margin-top: 2.7rem;
+    margin-bottom: 2.7rem;
+  }
+}
+
+.team__trigger {
+  @include tablets {
+    font-size: 24px;
+  }
+}
+
+.team-item_active {
+  .team__trigger {
+    color: #f9b43b;
+  }
+
+  .team-member {
+    height: 100%;
+    overflow: visible;
+  }
+
+  .team__trigger:before {
+    transform: rotate(-180deg);
+  }
+
+}
+
+.team-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.team__trigger {
+  text-decoration: none;
+  display: flex;
+  padding: 0;
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 0;
+    width: 0;
+    border: rem(6px) solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom-width: rem(0px);
+    position: absolute;
+    top: 50%;
+    left: -1.3125rem;
+    transform: translateY(-50%);
+  }
+
+  @include tablets {
+    display: inline-block;
+  }
+}
+
+.team-member {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.team-member__photo {
+  overflow: hidden;
+  max-width: rem(100px);
+  flex: 1 1 30%;
+  margin-right: rem(15px);
+
+  @include tablets {
+    max-width: 100%;
+  }
+}
+
+.team-member__photo-pic {
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 50%;
+}
+
+.team-member__data {
+  flex: 1 1 70%;
+}
+
+.team-member__position {
+  span {
+    font-family: ubuntubold;
+    font-size: rem(14px);
+    color: #fff;
+  }
+
+  @include tablets {
+    margin-top: 8px;
+  }
+}
+
+.team-member__description {
+  p {
+    font-family: ubuntulight;
+    font-size: rem(14px);
+    color: #fff;
+    max-width: rem(230px);
+    line-height: 1.71em;
+
+    @include tablets {
+      max-width: rem(363px);
+    }
+  }
+}

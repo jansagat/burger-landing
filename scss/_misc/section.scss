@@ -1,0 +1,36 @@
+.section-title {
+  font-size: rem(72px);
+  font-family: gagalinregular;
+  font-weight: 100;
+  margin-bottom: rem(35px);
+
+  &_color_yellow {
+    color: #f9b43b;
+  }
+
+  &_color_black {
+    color: #2f3234;
+    text-align: center;
+  }
+
+  &_color_white {
+    color: #ffffff;
+  }
+
+  @include tablets {
+    font-size: rem(67px);
+  }
+
+  @include phones {
+    font-size: rem(50px);
+  }
+}
+
+.section__name {
+  font-family: gagalinregular;
+  font-size: rem(14px);
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: rem(15px);
+  margin-bottom: rem(15px);
+}

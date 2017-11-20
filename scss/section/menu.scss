@@ -1,0 +1,83 @@
+.menu {
+  background: url(../img/bg/menu-bg.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: rem(650px);
+}
+
+.menu__content {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.menu__title {
+  top: rem(115px);
+  left: rem(95px);
+  position: absolute;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.menu__item {
+  display: flex;
+}
+
+.menu__link {
+  position: relative;
+  display: flex;
+  font-family: Gagalin;
+  font-size: rem(40px);
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+
+  & span {
+    white-space: nowrap;
+    position: absolute;
+    bottom: rem(-32px);
+    transform: rotate(-90deg);
+    transform-origin: top left;
+  }
+}
+
+.menu__text {
+  box-sizing: border-box;
+  width: 0;
+  padding: 0;
+  background: rgba(#2f3234, .93);
+  overflow: hidden;
+
+  p {
+    font-family: ubuntulight;
+    font-size: rem(14px);
+    color: #ffffff;
+    line-height: 1.71em;
+    overflow: hidden;
+  }
+}
+
+.menu__item_active .menu__text {
+  width: rem(545px);
+  padding: rem(35px);
+  overflow: visible;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    padding: rem(10px);
+  }
+}

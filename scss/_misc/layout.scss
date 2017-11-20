@@ -1,0 +1,31 @@
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: rem(15px);
+  }
+
+  @include phones {
+    font-size: rem(13px);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 95%;
+  max-width: 940px;
+}

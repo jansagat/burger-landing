@@ -4,26 +4,41 @@
   display: flex;
   justify-content: center;
   height: 100vh;
-  min-height: 650px;
-  min-width: 940px;
+  min-height: rem(650px);
+  //min-width: rem(940px);
+
+  @include phones {
+    min-width: 320px;
+  }
 }
 
 .best__container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  align-content: space-evenly;
 }
 
 .best-list {
   list-style: none;
   display: flex;
   align-items: baseline;
+  padding: 0;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .best__item{
-  flex: 1 0 300px;
+  flex: 1;
   text-align: center;
+  padding: 0 5px;
+
+  @include phones {
+    display: flex;
+    text-align: left;
+    margin-bottom: 40px;
+  }
 }
 
 .best__title {
@@ -32,16 +47,26 @@
 
 .best__subtitle {
   font-family: lifehackmedium;
-  font-size: 24.1px;
+  font-size: rem(24.1px);
   color: #2f3234;
-  margin-top: 20px;
-  margin-bottom: 29px;
+  margin-top: rem(20px);
+  margin-bottom: rem(29px);
+
+  @include phones {
+    margin-top: 0;
+    margin-bottom: rem(10px);
+  }
 }
 
 .best__description {
   font-family: ubuntulight;
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.7em;
   color: #2f3234;
+  text-align: center;
+}
+
+.best__image-parent {
+  min-width: rem(160px);
   text-align: center;
 }
