@@ -6,11 +6,11 @@
     <title>Burger</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="scss/section/best.scss">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="wrapper">
-    <div class="maincontent">
+    <div id="fullpage" class="maincontent">
         <section class="section burger">
             <div class="container burger__container">
                 <header class="burger__header">
@@ -33,7 +33,8 @@
                     </nav>
                 </header>
                 <div class="burger__content">
-                    <div class="burger__image-parent"><img src="img/pic/burger-picture.png" alt="Бургер" class="burger__image"></div>
+                    <div class="burger__image-parent"><img src="img/pic/burger-picture.png" alt="Бургер"
+                                                           class="burger__image"></div>
                     <div class="burger__text">
                         <h2 class="section-title section-title_color_yellow">мы делаем</h2>
                         <h3 class="burger__description">натуральные бургеры</h3>
@@ -49,7 +50,8 @@
                 <h2 class="section-title section-title_color_black">мы лучшие</h2>
                 <ul class="best-list">
                     <li class="best__item">
-                        <div class="best__image-parent"><img src="img/pic/meat.png" alt="мясо" class="best__image"></div>
+                        <div class="best__image-parent"><img src="img/pic/meat.png" alt="мясо" class="best__image">
+                        </div>
                         <div class="best__content">
                             <h5 class="best__subtitle">100% свежее мясо</h5>
                             <span class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
@@ -57,7 +59,8 @@
                         </div>
                     </li>
                     <li class="best__item">
-                        <div class="best__image-parent"><img src="img/pic/hand.png" alt="ручная сборка" class="best__image"></div>
+                        <div class="best__image-parent"><img src="img/pic/hand.png" alt="ручная сборка"
+                                                             class="best__image"></div>
                         <div class="best__content">
                             <h5 class="best__subtitle">Ручная сборка</h5>
                             <span class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет
@@ -65,7 +68,8 @@
                         </div>
                     </li>
                     <li class="best__item">
-                        <div class="best__image-parent"><img src="img/pic/natural.png" alt="натуральные ингредиенты" class="best__image"></div>
+                        <div class="best__image-parent"><img src="img/pic/natural.png" alt="натуральные ингредиенты"
+                                                             class="best__image"></div>
                         <div class="best__content">
                             <h5 class="best__subtitle">Натуральные ингредиенты</h5>
                             <span class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет
@@ -76,39 +80,67 @@
             </div>
         </section>
         <section class="section slider">
-            <div class="container slider__container">
-                <div class="slider__arrow">
+            <div class="swiper-container container slider__container">
+                <div class="swiper-button-prev slider__arrow">
                     <a href="#" class="slider__arrow-link">
                         <img src="./img/pic/arrow-scroll-left.png" alt="влево" class="slider__arrow-img">
                     </a>
                 </div>
-                <div class="slider__content">
-                    <div class="slider__col">
-                        <div class="slider__col-image">
-                            <img src="./img/pic/slider-burger.png" alt="Бургер" class="slider__image">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider__content">
+                        <div class="slider__col">
+                            <div class="slider__col-image">
+                                <img src="./img/pic/slider-burger.png" alt="Бургер" class="slider__image">
+                            </div>
+                            <a href="#" class="slider__composition">
+                                <img src="./img/pic/composition-burger.png" alt="состав" class="slider__composition-img">
+                                <span class="slider__composition-text">Состав</span>
+                            </a>
+                            <div class="slider__kcal">
+                                <span class="slider__kcal-text slider__kcal-value">1200</span>
+                                <span class="slider__kcal-text">ккал</span>
+                            </div>
                         </div>
-                        <a href="#" class="slider__composition">
-                            <img src="./img/pic/composition-burger.png" alt="состав" class="slider__composition-img">
-                            <span class="slider__composition-text">Состав</span>
-                        </a>
-                        <div class="slider__kcal">
-                            <span class="slider__kcal-text slider__kcal-value">1200</span>
-                            <span class="slider__kcal-text">ккал</span>
+                        <div class="slider__col">
+                            <h2 class="section-title section-title_color_white slider-title">dark beef burger</h2>
+                            <p class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
+                                тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль
+                                теперь с добавлением экзотического соуса чураско.</p>
+                            <div class="slider__order">
+                                <span class="slider__price">500</span>
+                                <span class="slider__currency">рублей</span>
+                                <a href="#" class="button nav__order">заказать</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="slider__col">
-                        <h2 class="section-title section-title_color_white slider-title">dark beef burger</h2>
-                        <p class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
-                            тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль
-                            теперь с добавлением экзотического соуса чураско.</p>
-                        <div class="slider__order">
-                            <span class="slider__price">500</span>
-                            <span class="slider__currency">рублей</span>
-                            <a href="#" class="button nav__order">заказать</a>
+                    <div class="swiper-slide slider__content">
+                        <div class="slider__col">
+                            <div class="slider__col-image">
+                                <img src="./img/pic/slider-burger.png" alt="Бургер" class="slider__image">
+                            </div>
+                            <a href="#" class="slider__composition">
+                                <img src="./img/pic/composition-burger.png" alt="состав" class="slider__composition-img">
+                                <span class="slider__composition-text">Состав</span>
+                            </a>
+                            <div class="slider__kcal">
+                                <span class="slider__kcal-text slider__kcal-value">1200</span>
+                                <span class="slider__kcal-text">ккал</span>
+                            </div>
+                        </div>
+                        <div class="slider__col">
+                            <h2 class="section-title section-title_color_white slider-title">dark beef burger</h2>
+                            <p class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
+                                тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль
+                                теперь с добавлением экзотического соуса чураско.</p>
+                            <div class="slider__order">
+                                <span class="slider__price">500</span>
+                                <span class="slider__currency">рублей</span>
+                                <a href="#" class="button nav__order">заказать</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider__arrow">
+                <div class="swiper-button-next slider__arrow">
                     <a href="#" class="slider__arrow-link">
                         <img src="./img/pic/arrow-scroll-right.png" alt="вправо" class="slider__arrow-img">
                     </a>
@@ -118,7 +150,7 @@
         <section class="section team">
             <div class="team__content">
                 <h2 class="section-title section-title_color_yellow team-title">команда</h2>
-                <ul class="team-list">
+                <ul class="team-list" id="teamList">
                     <li class="team-item">
                         <a href="#" class="section__name team__trigger">Дэниэл Редклиф</a>
                         <div class="team-member">
@@ -189,7 +221,7 @@
         <section class="section menu">
             <div class="menu__content">
                 <h2 class="section-title section-title_color_white menu__title">Меню</h2>
-                <ul class="menu-list">
+                <ul class="menu-list" id="menuList">
                     <li class="menu__item menu__item_active">
                         <a href="#" class="menu__link">
                             <img src="./img/bg/menu-bg-1.jpg" alt="меню">
@@ -211,17 +243,37 @@
                             <img src="./img/bg/menu-bg-2.jpg" alt="меню">
                             <span>Вегетарианское</span>
                         </a>
+                        <div class="menu__text">
+                            <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
+                                сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+                                пространственно выбирает метр.
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
+                        </div>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link menu__link_bg_meat">
                             <img src="./img/bg/menu-bg-3.jpg" alt="меню">
                             <span>Диетическое</span></a>
+                        <div class="menu__text">
+                            <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
+                                сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+                                пространственно выбирает метр.
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
+                        </div>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="section reviews">
-            <ul class="reviews-list">
+            <ul class="reviews-list" id="reviewList">
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/1.jpg)">
                     <div class="reviews__description">
                         <h6 class="section__name reviews__name">Константин Спилберг</h6>
@@ -444,8 +496,37 @@
                 <a href="#" class="hamburger-menu__link">Контакты</a>
             </li>
         </ul>
+        <div id="modal" class="modal">
+            <div class="modal__block">
+                <h6 class="section__name reviews__name modal__name"></h6>
+                <a href="#" class="modal__link">
+                    <img src="./img/pic/modal-close.png" alt="закрыть окно" class="modal__close-img">
+                </a>
+                <span class="reviews__text modal__text"></span>
+            </div>
+        </div>
     </div>
 </div>
 <script src="./js/main.js"></script>
+
+<!-- Swiper JS -->
+<script src="./js/swiper.min.js"></script>
+
+<!-- Full page -->
+<script type="text/javascript" src="./js/fullpage.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+//    $(document).ready(function() {
+//        $('#fullpage').fullpage();
+//    });
+</script>
 </body>
 </html>
