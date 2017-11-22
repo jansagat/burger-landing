@@ -46,23 +46,15 @@
     color: #f9b43b;
   }
 
-  @keyframes move {
-    0% {height: 0;}
-    100% {height: 117px;}
-  }
-
   .team-member {
-    animation: move .4s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+    height: 100%;
+    max-height: 340px;
   }
 
   .team__trigger:before {
     transform: rotate(-180deg);
   }
 }
-
-
 
 .team-list {
   list-style: none;
@@ -100,8 +92,10 @@
 
 .team-member {
   display: flex;
+  max-height: 0;
   height: 0;
   overflow: hidden;
+  transition: max-height .9s linear;
 
   @include tablets {
     flex-direction: column;

@@ -604,46 +604,37 @@ h2, h3, h4, h5, h6 {
 .team-item_active .team__trigger {
   color: #f9b43b;
 }
-@keyframes move {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 117px;
-  }
+/* line 49, ../scss/section/team.scss */
+.team-item_active .team-member {
+  height: 100%;
+  max-height: 340px;
 }
 /* line 54, ../scss/section/team.scss */
-.team-item_active .team-member {
-  animation: move .4s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-/* line 60, ../scss/section/team.scss */
 .team-item_active .team__trigger:before {
   transform: rotate(-180deg);
 }
 
-/* line 67, ../scss/section/team.scss */
+/* line 59, ../scss/section/team.scss */
 .team-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 67, ../scss/section/team.scss */
+  /* line 59, ../scss/section/team.scss */
   .team-list {
     text-align: center;
   }
 }
 
-/* line 77, ../scss/section/team.scss */
+/* line 69, ../scss/section/team.scss */
 .team__trigger {
   text-decoration: none;
   display: flex;
   padding: 0;
   position: relative;
 }
-/* line 83, ../scss/section/team.scss */
+/* line 75, ../scss/section/team.scss */
 .team__trigger:before {
   content: "";
   height: 0;
@@ -657,26 +648,28 @@ h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
 }
 @media screen and (max-width: 768px) {
-  /* line 77, ../scss/section/team.scss */
+  /* line 69, ../scss/section/team.scss */
   .team__trigger {
     display: inline-block;
   }
 }
 
-/* line 101, ../scss/section/team.scss */
+/* line 93, ../scss/section/team.scss */
 .team-member {
   display: flex;
+  max-height: 0;
   height: 0;
   overflow: hidden;
+  transition: max-height .9s linear;
 }
 @media screen and (max-width: 768px) {
-  /* line 101, ../scss/section/team.scss */
+  /* line 93, ../scss/section/team.scss */
   .team-member {
     flex-direction: column;
   }
 }
 
-/* line 111, ../scss/section/team.scss */
+/* line 105, ../scss/section/team.scss */
 .team-member__photo {
   overflow: hidden;
   max-width: 6.25rem;
@@ -684,38 +677,38 @@ h2, h3, h4, h5, h6 {
   margin-right: 0.9375rem;
 }
 @media screen and (max-width: 768px) {
-  /* line 111, ../scss/section/team.scss */
+  /* line 105, ../scss/section/team.scss */
   .team-member__photo {
     max-width: 100%;
   }
 }
 
-/* line 122, ../scss/section/team.scss */
+/* line 116, ../scss/section/team.scss */
 .team-member__photo-pic {
   width: 6.25rem;
   height: 6.25rem;
   border-radius: 50%;
 }
 
-/* line 128, ../scss/section/team.scss */
+/* line 122, ../scss/section/team.scss */
 .team-member__data {
   flex: 1 1 70%;
 }
 
-/* line 133, ../scss/section/team.scss */
+/* line 127, ../scss/section/team.scss */
 .team-member__position span {
   font-family: ubuntubold;
   font-size: 0.875rem;
   color: #fff;
 }
 @media screen and (max-width: 768px) {
-  /* line 132, ../scss/section/team.scss */
+  /* line 126, ../scss/section/team.scss */
   .team-member__position {
     margin-top: 8px;
   }
 }
 
-/* line 145, ../scss/section/team.scss */
+/* line 139, ../scss/section/team.scss */
 .team-member__description p {
   font-family: ubuntulight;
   font-size: 0.875rem;
@@ -724,7 +717,7 @@ h2, h3, h4, h5, h6 {
   line-height: 1.71em;
 }
 @media screen and (max-width: 768px) {
-  /* line 145, ../scss/section/team.scss */
+  /* line 139, ../scss/section/team.scss */
   .team-member__description p {
     max-width: 22.6875rem;
   }
