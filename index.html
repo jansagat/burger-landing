@@ -14,19 +14,19 @@
         <section class="section burger">
             <div class="container burger__container">
                 <header class="burger__header">
-                    <a href="#" class="burger-logo-link">
+                    <a href="#burger" class="burger-logo-link">
                         <img src="./img/logo/logo.png" class="burger__logo" alt="Логотип">
                     </a>
                     <nav class="nav">
                         <ul class="nav-list">
-                            <li class="nav__item"><a href="#" class="nav__link">о нас</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">бургеры</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">команда</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">меню</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">отзывы</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">контакты</a></li>
+                            <li class="nav__item"><a href="#best" class="nav__link">о нас</a></li>
+                            <li class="nav__item"><a href="#slider" class="nav__link">бургеры</a></li>
+                            <li class="nav__item"><a href="#team" class="nav__link">команда</a></li>
+                            <li class="nav__item"><a href="#menu" class="nav__link">меню</a></li>
+                            <li class="nav__item"><a href="#reviews" class="nav__link">отзывы</a></li>
+                            <li class="nav__item"><a href="#map" class="nav__link">контакты</a></li>
                         </ul>
-                        <a href="#" class="button nav__order">заказать</a>
+                        <a href="#order" class="button nav__order">заказать</a>
                         <a href="#" class="button nav__hamburger-menu">
                             <img src="./img/pic/ham-button.png" alt="меню" class="nav__hamburger-menu-img">
                         </a>
@@ -40,7 +40,7 @@
                         <h3 class="burger__description">натуральные бургеры</h3>
                     </div>
                 </div>
-                <a href="#" class="burger__arrow">
+                <a href="#best" class="burger__arrow">
                     <img src="./img/pic/arrow-scroll.png" alt="вниз" class="burger__arrow-link">
                 </a>
             </div>
@@ -109,7 +109,7 @@
                             <div class="slider__order">
                                 <span class="slider__price">500</span>
                                 <span class="slider__currency">рублей</span>
-                                <a href="#" class="button nav__order">заказать</a>
+                                <a href="#order" class="button nav__order">заказать</a>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                             <div class="slider__order">
                                 <span class="slider__price">500</span>
                                 <span class="slider__currency">рублей</span>
-                                <a href="#" class="button nav__order">заказать</a>
+                                <a href="#order" class="button nav__order">заказать</a>
                             </div>
                         </div>
                     </div>
@@ -272,7 +272,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section reviews" id="reviews">
+        <section class="section reviews">
             <ul class="reviews-list" id="reviewList">
                 <li class="reviews__item" style="background-image: url(./img/pic/feed/1.jpg)">
                     <div class="reviews__description">
@@ -450,30 +450,30 @@
                 </div>
             </div>
         </section>
-        <ul class="pagination">
+        <ul id="circle-menu" class="pagination">
             <li class="pagination__item">
-                <a href="#" class="pagination__link pagination__link_active"></a>
+                <a href="#1" data-menuanchor="burger" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#2" data-menuanchor="best" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#3" data-menuanchor="slider" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#4" data-menuanchor="team" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#5" data-menuanchor="menu" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#6" data-menuanchor="reviews" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#7" data-menuanchor="order" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#" class="pagination__link"></a>
+                <a href="#8" data-menuanchor="map" class="pagination__link"></a>
             </li>
         </ul>
         <ul class="hamburger-menu__list">
@@ -525,7 +525,11 @@
     });
 
     $(document).ready(function() {
-        $('#fullpage').fullpage();
+        $('#fullpage').fullpage({
+            menu: '#circle-menu',
+            fixedElements: '.pagination, #modal__block',
+            anchors:['burger', 'best', 'slider', 'team', 'menu', 'reviews', 'order', 'map']
+        });
     });
 </script>
 </body>

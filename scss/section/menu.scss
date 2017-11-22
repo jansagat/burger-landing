@@ -2,7 +2,7 @@
   background: url(../img/bg/menu-bg.jpg) center center no-repeat;
   background-size: cover;
   height: 100vh;
-  min-height: rem(650px);
+  min-height: rem(600px);
 }
 
 .menu__content {
@@ -54,10 +54,12 @@
 
 .menu__text {
   box-sizing: border-box;
-  width: 0;
+  max-width: 0;
   padding: 0;
+  opacity: 0;
   background: rgba(#2f3234, .93);
   overflow: hidden;
+  transition: all .5s linear;
 
   p {
     font-family: ubuntulight;
@@ -65,13 +67,20 @@
     color: #ffffff;
     line-height: 1.71em;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity .1s linear .5s;
   }
 }
 
 .menu__item_active .menu__text {
-  width: rem(545px);
+  max-width: rem(545px);
   padding: rem(35px);
   overflow: visible;
+  opacity: 1;
+
+  & p {
+    opacity: 1;
+  }
 
   @include tablets {
     width: 100%;

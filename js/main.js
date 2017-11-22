@@ -71,17 +71,12 @@ function showModal() {
         modalBlockClass = document.querySelector('.modal__block'),
         modalName = document.querySelector('.modal__name'),
         modalText = document.querySelector('.modal__text'),
-        reviews = document.querySelector('#reviews'),
-        modalBlockId = document.querySelector('#modal__block'),
         modalClass = document.querySelector('.modal');
-
 
     reviewList.addEventListener('click', function (e) {
         e.preventDefault();
 
         if (e.target.tagName === 'A') {
-            $(modalBlockId).appendTo(reviews);
-
             modalBlockClass.style.display = 'block';
             modalClass.style.display = 'block';
             modalName.innerText = e.target.parentElement.children[0].textContent;
