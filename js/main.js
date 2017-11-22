@@ -68,24 +68,32 @@ function clickToTeamAccordion() {
 
 function showModal() {
     var reviewList = document.getElementById('reviewList'),
-        modalClass = document.querySelector('.modal__block'),
+        modalBlockClass = document.querySelector('.modal__block'),
         modalName = document.querySelector('.modal__name'),
-        modalText = document.querySelector('.modal__text');
+        modalText = document.querySelector('.modal__text'),
+        reviews = document.querySelector('#reviews'),
+        modalBlockId = document.querySelector('#modal__block'),
+        modalClass = document.querySelector('.modal');
+
 
     reviewList.addEventListener('click', function (e) {
         e.preventDefault();
 
         if (e.target.tagName === 'A') {
+            $(modalBlockId).appendTo(reviews);
+
+            modalBlockClass.style.display = 'block';
             modalClass.style.display = 'block';
             modalName.innerText = e.target.parentElement.children[0].textContent;
             modalText.innerText = e.target.parentElement.children[1].textContent;
         }
     });
 
-    modalClass.addEventListener('click', function (e) {
+    modalBlockClass.addEventListener('click', function (e) {
         e.preventDefault();
 
         if (e.target.tagName === 'A' || e.target.tagName === 'IMG') {
+            modalBlockClass.style.display = 'none';
             modalClass.style.display = 'none';
         }
     })

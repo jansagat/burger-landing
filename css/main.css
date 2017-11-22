@@ -116,6 +116,7 @@ h2, h3, h4, h5, h6 {
   position: relative;
   width: 95%;
   max-width: 940px;
+  height: 100%;
 }
 
 /* line 1, ../scss/section/burger.scss */
@@ -144,7 +145,7 @@ h2, h3, h4, h5, h6 {
 .burger__header {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.625rem;
+  margin-top: 0.9375rem;
 }
 
 /* line 25, ../scss/section/burger.scss */
@@ -321,9 +322,10 @@ h2, h3, h4, h5, h6 {
 .reviews {
   height: 100vh;
   min-height: 40.625rem;
+  position: relative;
 }
 
-/* line 6, ../scss/section/review.scss */
+/* line 7, ../scss/section/review.scss */
 .reviews-list {
   list-style: none;
   height: 100%;
@@ -336,20 +338,20 @@ h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-/* line 18, ../scss/section/review.scss */
+/* line 19, ../scss/section/review.scss */
 .reviews__item {
   background: no-repeat center/cover;
   flex: 1 0 25%;
   position: relative;
 }
 @media screen and (max-width: 768px) {
-  /* line 18, ../scss/section/review.scss */
+  /* line 19, ../scss/section/review.scss */
   .reviews__item {
     flex: 1 0 50%;
   }
 }
 
-/* line 28, ../scss/section/review.scss */
+/* line 29, ../scss/section/review.scss */
 .reviews__description {
   position: absolute;
   height: 100%;
@@ -362,30 +364,30 @@ h2, h3, h4, h5, h6 {
   padding: 0.625rem;
 }
 @media screen and (max-width: 768px) {
-  /* line 28, ../scss/section/review.scss */
+  /* line 29, ../scss/section/review.scss */
   .reviews__description {
     text-align: center;
   }
 }
 
-/* line 44, ../scss/section/review.scss */
+/* line 45, ../scss/section/review.scss */
 .reviews__item:hover .reviews__description {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 49, ../scss/section/review.scss */
+/* line 50, ../scss/section/review.scss */
 .reviews__name {
   padding-top: 15%;
 }
 @media screen and (max-width: 768px) {
-  /* line 49, ../scss/section/review.scss */
+  /* line 50, ../scss/section/review.scss */
   .reviews__name {
     padding-top: 15px;
   }
 }
 
-/* line 57, ../scss/section/review.scss */
+/* line 58, ../scss/section/review.scss */
 .reviews__text {
   font-family: ubuntulight;
   font-size: 0.875rem;
@@ -395,7 +397,7 @@ h2, h3, h4, h5, h6 {
   margin-bottom: 0.9375rem;
 }
 
-/* line 66, ../scss/section/review.scss */
+/* line 67, ../scss/section/review.scss */
 .reviews__link {
   display: inline-block;
   text-decoration: none;
@@ -408,7 +410,7 @@ h2, h3, h4, h5, h6 {
   padding: 0.8125rem 1.75rem;
 }
 
-/* line 78, ../scss/section/review.scss */
+/* line 79, ../scss/section/review.scss */
 .reviews__link:hover {
   background-color: #1f2122;
 }
@@ -1413,21 +1415,29 @@ input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
 /* line 1, ../scss/section/modal.scss */
 .modal {
   background: rgba(47, 50, 52, 0.99);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
 }
 
-/* line 5, ../scss/section/modal.scss */
+/* line 12, ../scss/section/modal.scss */
 .modal__block {
   max-width: 470px;
   background: #ffffff;
   border-radius: 5px;
   display: none;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-/* line 16, ../scss/section/modal.scss */
+/* line 24, ../scss/section/modal.scss */
 .modal__name {
   padding-top: 10px;
   margin: 10px;
@@ -1435,13 +1445,13 @@ input[type="checkbox"]:checked + .form__block-title_type_checkbox:after {
   color: #2f3234;
 }
 
-/* line 23, ../scss/section/modal.scss */
+/* line 31, ../scss/section/modal.scss */
 .modal__text {
   margin: 10px;
   color: #2f3234;
 }
 
-/* line 28, ../scss/section/modal.scss */
+/* line 36, ../scss/section/modal.scss */
 .modal__link {
   float: right;
   margin: 15px;
