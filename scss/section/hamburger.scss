@@ -1,0 +1,53 @@
+.hamburger-menu__list {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(#2f3234, .99);
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+.hamburger-menu__item {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 2.291em;
+}
+
+.hamburger-menu__item:first-child {
+  margin-top: 260px;
+
+  @include phones {
+    margin-top: 185px;
+  }
+}
+
+.hamburger-menu__item:last-child:after {
+  content: '';
+  width: 0;
+  height: 0;
+}
+
+.hamburger-menu__item:after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  position: absolute;
+  top: 2.291em;
+  left: 50%;
+  border-radius: 50%;
+}
+
+.hamburger-menu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: ubunturegular;
+  color: #ffffff;
+  display: block;
+}
