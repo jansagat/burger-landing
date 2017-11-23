@@ -1,0 +1,40 @@
+.modal {
+  background: rgba(#2f3234, .99);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+}
+
+.modal__block {
+  max-width: 470px;
+  background: #ffffff;
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.modal__name {
+  padding-top: 10px;
+  margin: 10px;
+  display: inline-block;
+  color: #2f3234;
+}
+
+.modal__text {
+  margin: 10px;
+  color: #2f3234;
+}
+
+.modal__link {
+  float: right;
+  margin: 15px;
+  display: inline-block;
+}

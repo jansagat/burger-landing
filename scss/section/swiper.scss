@@ -1,0 +1,17 @@
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}

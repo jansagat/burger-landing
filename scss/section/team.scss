@@ -2,7 +2,7 @@
   background: url(../img/bg/team-bg.jpg) center center no-repeat;
   background-size: cover;
   height: 100vh;
-  min-height: 40.625rem;
+  min-height: rem(600px);
   position: relative;
 }
 
@@ -48,13 +48,12 @@
 
   .team-member {
     height: 100%;
-    overflow: visible;
+    max-height: 340px;
   }
 
   .team__trigger:before {
     transform: rotate(-180deg);
   }
-
 }
 
 .team-list {
@@ -93,8 +92,10 @@
 
 .team-member {
   display: flex;
+  max-height: 0;
   height: 0;
   overflow: hidden;
+  transition: max-height .9s linear;
 
   @include tablets {
     flex-direction: column;

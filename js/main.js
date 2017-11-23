@@ -6,7 +6,6 @@ function clickToMenu() {
         menuStyle = getComputedStyle(menuBlock);
 
     menuButton.addEventListener('click', function (e) {
-        console.log('click');
         if (menuStyle.display === 'none') {
             menuBlock.style.display = "flex";
             logo.style.zIndex = 1;
@@ -21,4 +20,81 @@ function clickToMenu() {
     })
 }
 
+function clickToMenuAccordion() {
+    var menuList = document.getElementById('menuList'),
+        items = document.querySelectorAll('.menu__item');
+
+    items.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (e.target.parentElement.tagName === 'A') {
+                //if element(<li>) has not menu__item_active
+                if (item.classList.value.indexOf('menu__item_active') === -1) {
+                    items.forEach(function (i) {
+                        i.classList.remove('menu__item_active');
+                    });
+                    item.className += ' menu__item_active';
+                }
+            }
+        })
+    })
+}
+
+function clickToTeamAccordion() {
+    var teamList = document.getElementById('teamList'),
+        items = document.querySelectorAll('.team-item');
+
+    teamList.addEventListener('click', function (e) {
+        e.preventDefault();
+        var parentElement = e.target.parentElement,
+            parentClassList = e.target.parentElement.classList;
+
+        //if clicked link(a href)
+        var classlist = e.target.classList;
+        if (classlist.value.indexOf('team__trigger') !== -1) {
+
+            //if parent element(<li>) has not class 'team-item_active', add it
+            if (parentClassList.value.indexOf('team-item_active') === -1) {
+                items.forEach(function (item) {
+                    if (item.classList.length > 0) {
+                        item.classList.remove('team-item_active')
+                    }
+                });
+                parentElement.className += ' team-item_active';
+            }
+        }
+    })
+}
+
+function showModal() {
+    var reviewList = document.getElementById('reviewList'),
+        modalBlockClass = document.querySelector('.modal__block'),
+        modalName = document.querySelector('.modal__name'),
+        modalText = document.querySelector('.modal__text'),
+        modalClass = document.querySelector('.modal');
+
+    reviewList.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (e.target.tagName === 'A') {
+            modalBlockClass.style.display = 'block';
+            modalClass.style.display = 'block';
+            modalName.innerText = e.target.parentElement.children[0].textContent;
+            modalText.innerText = e.target.parentElement.children[1].textContent;
+        }
+    });
+
+    modalBlockClass.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (e.target.tagName === 'A' || e.target.tagName === 'IMG') {
+            modalBlockClass.style.display = 'none';
+            modalClass.style.display = 'none';
+        }
+    })
+}
+
 clickToMenu();
+clickToTeamAccordion();
+clickToMenuAccordion();
+showModal();

@@ -1,6 +1,6 @@
 .slider {
   height: 100vh;
-  min-height: rem(650px);
+  min-height: rem(600px);
   background: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
   background: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
   background: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
@@ -10,10 +10,7 @@
   display: flex;
   height: 100%;
   align-items: center;
-}
-
-.slider__arrow {
-  width: 45px;
+  overflow: hidden;
 }
 
 .slider__arrow-link {

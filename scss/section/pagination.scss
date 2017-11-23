@@ -23,7 +23,7 @@
   border: rem(1px) solid transparent;
 }
 
-.pagination__link:hover:before, .pagination__link_active:before{
+.pagination__link:hover:before, .active:before{
   border-color: #fff;
 }
 
