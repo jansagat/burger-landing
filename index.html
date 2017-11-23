@@ -351,40 +351,40 @@
         <section class="section order">
             <div class="container order__container">
                 <h2 class="section-title section-title_color_yellow order-title">Закажите доставку</h2>
-                <form action="/" class="from order__form">
+                <form action="./server.php" method="post" class="from order__form" id="order__form">
                     <div class="form__column">
                         <div class="form__row">
                             <label class="form__block">
                                 <span class="form__block-title">Имя</span>
-                                <input type="text" class="form__input">
+                                <input type="text" name="name" class="form__input">
                             </label>
                             <label class="form__block">
                                 <span class="form__block-title">Телефон</span>
-                                <input type="text" class="form__input">
+                                <input type="text" name="tel" class="form__input">
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block">
                                 <span class="form__block-title">Улица</span>
-                                <input type="text" class="form__input">
+                                <input type="text" name="street" class="form__input">
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block">
                                 <span class="form__block-title">Дом</span>
-                                <input type="text" class="form__input">
+                                <input type="text" name="house" class="form__input">
                             </label>
                             <label class="form__block">
                                 <span class="form__block-title">Корпус</span>
-                                <input type="text" class="form__input">
+                                <input type="text" name="housing" class="form__input">
                             </label>
                             <label class="form__block">
                                 <span class="form__block-title">Квартира</span>
-                                <input type="text" class="form__input">
+                                <input type="text" name="flat" class="form__input">
                             </label>
                             <label class="form__block">
                                 <span class="form__block-title">Этаж</span>
-                                <input type="text" class="form__input">
+                                <input type="text" name="floor" class="form__input">
                             </label>
                         </div>
                     </div>
@@ -397,23 +397,23 @@
                         </div>
                         <div class="form__row">
                             <label class="form__block form_block_type_input form__block_flex_off">
-                                <input type="radio" name="photo" class="form__radio" value="zdacha">
+                                <input type="radio" name="cardOrSdacha" class="form__radio" value="sdacha">
                                 <span class="form__block-title form__block-title_type_radio">Потребуется здача</span>
                             </label>
                             <label class="form__block form_block_type_input form__block_flex_off">
-                                <input type="radio" name="photo" class="form__radio" value="card">
+                                <input type="radio" name="cardOrSdacha" class="form__radio" value="card">
                                 <span class="form__block-title form__block-title_type_radio">Оплата по карте</span>
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block form_block_type_input">
-                                <input type="checkbox" class="form__checkbox">
+                                <input type="checkbox" name="call" class="form__checkbox">
                                 <span class="form__block-title form__block-title_type_checkbox">Не перезванивать</span>
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block form__block_flex_off">
-                                <button type="button" class="form__button">Заказать</button>
+                                <button type="submit" class="form__button">Заказать</button>
                             </label>
                             <label class="form__block form__block_flex_off">
                                 <button type="reset" class="form__button_reset" value="Reset">Очистить</button>
