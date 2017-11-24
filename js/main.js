@@ -94,7 +94,63 @@ function showModal() {
     })
 }
 
+function sendMailAjax(data) {
+    $.ajax({
+        url: 'server.php',
+        dataType: 'text',
+        type: 'post',
+        contentType: 'application/x-www-form-urlencoded',
+        data: data
+    }).done(function (e) {
+        console.log('DONE: ', e);
+        showMessage('green', 'Заказ принят, ожидайте');
+    }).fail(function (e) {
+        if (e.status === 400){
+            var result = $.parseJSON(e.responseText);
+            console.log('FAIL: ', result);
+            animateInvalidInput(result);
+        } else if (e.status !== 200 || e.readyState !== 4) {
+            var result = e.responseText;
+            console.log('FAIL: ', result);
+            showMessage('red', 'Заказ не отправлен, свяжитесь со службой поддержки');
+        }
+    });
+}
+
+function clickSubmitForm() {
+    $(document).ready(function () {
+        var form = $('#order__form');
+
+        form.submit(function (e) {
+            e.preventDefault();
+            var data = form.serialize();
+            sendMailAjax(data);
+        });
+    });
+}
+
+function animateInvalidInput(result){
+    for(var item in result){
+        $("[name=" + item + "]").addClass('invalid__input').delay(1000).queue(function(){
+            $(this).removeClass('invalid__input').dequeue();
+        });
+    }
+}
+
+function showMessage(color, msg) {
+    $('<span>', {
+        'class': 'message__input',
+        css: {
+            'color': color
+        },
+        text: msg
+    }).appendTo('body').delay(5000).queue(function(){
+        $(this).remove('.message__input').dequeue();
+    });
+}
+
 clickToMenu();
 clickToTeamAccordion();
 clickToMenuAccordion();
 showModal();
+clickSubmitForm();

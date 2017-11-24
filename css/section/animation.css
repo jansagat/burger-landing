@@ -1,0 +1,13 @@
+/* line 1, ../../scss/section/animation.scss */
+.invalid__input {
+  animation: invalid .5s linear forwards;
+}
+
+@keyframes invalid {
+  0%, 100% {
+    background: white;
+  }
+  50% {
+    background: red;
+  }
+}

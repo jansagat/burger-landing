@@ -6,7 +6,9 @@
     <title>Burger</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -407,7 +409,7 @@
                         </div>
                         <div class="form__row">
                             <label class="form__block form_block_type_input">
-                                <input type="checkbox" name="call" class="form__checkbox">
+                                <input type="checkbox" name="notCall" class="form__checkbox">
                                 <span class="form__block-title form__block-title_type_checkbox">Не перезванивать</span>
                             </label>
                         </div>
@@ -527,7 +529,7 @@
     $(document).ready(function() {
         $('#fullpage').fullpage({
             menu: '#circle-menu',
-            fixedElements: '.pagination, #modal__block',
+            fixedElements: '.pagination, #modal__block, .message__input',
             anchors:['burger', 'best', 'slider', 'team', 'menu', 'reviews', 'order', 'map']
         });
     });
