@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -26,7 +27,7 @@
                             <li class="nav__item"><a href="#team" class="nav__link">команда</a></li>
                             <li class="nav__item"><a href="#menu" class="nav__link">меню</a></li>
                             <li class="nav__item"><a href="#reviews" class="nav__link">отзывы</a></li>
-                            <li class="nav__item"><a href="#map" class="nav__link">контакты</a></li>
+                            <li class="nav__item"><a href="#contacts" class="nav__link">контакты</a></li>
                         </ul>
                         <a href="#order" class="button nav__order">заказать</a>
                         <a href="#" class="button nav__hamburger-menu">
@@ -426,6 +427,7 @@
             </div>
         </section>
         <section class="section map">
+            <div id="map"></div>
             <div class="footer">
                 <div class="footer__container">
                     <div class="footer__contacts">
@@ -475,7 +477,7 @@
                 <a href="#7" data-menuanchor="order" class="pagination__link"></a>
             </li>
             <li class="pagination__item">
-                <a href="#8" data-menuanchor="map" class="pagination__link"></a>
+                <a href="#8" data-menuanchor="contacts" class="pagination__link"></a>
             </li>
         </ul>
         <ul class="hamburger-menu__list">
@@ -530,8 +532,46 @@
         $('#fullpage').fullpage({
             menu: '#circle-menu',
             fixedElements: '.pagination, #modal__block, .message__input',
-            anchors:['burger', 'best', 'slider', 'team', 'menu', 'reviews', 'order', 'map']
+            anchors:['burger', 'best', 'slider', 'team', 'menu', 'reviews', 'order', 'contacts']
         });
+    });
+
+</script>
+<script type="text/javascript">
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [55.75948062, 37.62562037],
+                zoom: 15,
+                controls: []
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
+
+            myPlacemark = new ymaps.Placemark([55.76015673, 37.61931181], {}, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/pic/map-marker.png',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-5, -38]
+            }),
+
+            mySecondPlacemark = new ymaps.Placemark([55.76276449, 37.62866735], {}, {
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'img/pic/map-marker.png',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-24, -24],
+                iconContentOffset: [15, 15],
+                iconContentLayout: MyIconContentLayout
+            });
+
+        myMap.behaviors.disable('scrollZoom');
+        myMap.geoObjects
+            .add(myPlacemark)
+            .add(mySecondPlacemark);
     });
 </script>
 </body>

@@ -1,0 +1,22 @@
+{
+  "name": "burger-landing",
+  "version": "1.0.0",
+  "description": "burger-landing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jansagat/burger-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jansagat/burger-landing/issues"
+  },
+  "homepage": "https://github.com/jansagat/burger-landing#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
